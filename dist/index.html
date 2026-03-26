@@ -38,6 +38,10 @@
 									<a href="./">Журнал</a>
 								</li>
 							</ul>
+							<div class="header__buttons">
+								<a href="./" data-popup="#login" class="btn">Войти</a>
+								<a href="./" data-popup="#registration" class="btn btn-light">Зарегистрироваться</a>
+							</div>
 						</div>
 						<div class="header-search">
 							<div class="header-search__buttons">
@@ -53,6 +57,107 @@
 									</svg>
 								</div>
 							</div>
+							<div class="header-search__dropdown">
+								<div class="header-search__column">
+									<div class="header-search__title">Учебные заведения</div>
+									<ul>
+										<li>
+											<a href="./">
+												<div class="header-search__icon icon-img">
+													<img loading="lazy" src="img/image2.webp" alt="">
+												</div>
+												<span>Московский государственный университет им. М. В. Ломоносова</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon icon-img">
+													<img loading="lazy" src="img/image3.webp" alt="">
+												</div>
+												<span>Национальный исследовательский университет «Высшая школа экономики»</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon icon-img">
+													<img loading="lazy" src="img/image4.webp" alt="">
+												</div>
+												<span>Санкт-Петербургский государственный университет</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="header-search__column">
+									<div class="header-search__title">Специальности</div>
+									<ul>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#hammer"></use>
+													</svg>
+												</div>
+												<span>Графический дизайн</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#hammer"></use>
+													</svg>
+												</div>
+												<span>Промышленный дизайн</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#hammer"></use>
+													</svg>
+												</div>
+												<span>Веб-дизайн</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="header-search__column">
+									<div class="header-search__title">Анонсы</div>
+									<ul>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#newspaper"></use>
+													</svg>
+												</div>
+												<span>Жизнь в кампусе: чего ожидать от студенческой жизни</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#newspaper"></use>
+													</svg>
+												</div>
+												<span>Топ 10 популярных специальностей в 2026 году </span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#newspaper"></use>
+													</svg>
+												</div>
+												<span>Как подготовиться к вступительным экзаменам без стресса</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 						<div class="header__right">
 							<button type="button" class="header__icon header-search-button">
@@ -60,7 +165,7 @@
 									<use xlink:href="img/sprite.svg#search"></use>
 								</svg>
 							</button>
-							<a href="./" class="header__icon header-location">
+							<a data-da=".header__menu, 820, 1" data-popup="#location" href="./" class="header__icon header-location">
 								<svg aria-hidden="true" width="20" height="20">
 									<use xlink:href="img/sprite.svg#location"></use>
 								</svg>
@@ -68,7 +173,12 @@
 									Санкт-Петербург
 								</span>
 							</a>
-							<a href="./" class="btn">Войти</a>
+							<button type="button" class="header__icon header-burger">
+								<div class="icon-menu">
+									<span></span>
+								</div>
+							</button>
+							<a href="./" class="btn" data-popup="#login">Войти</a>
 						</div>
 					</div>
 				</div>
@@ -222,1016 +332,403 @@
 			</main>
 
 		</div>
-		<div id="call" aria-hidden="true" class="popup popup-call">
+		<div id="location" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
-					<div data-close class="popup__close">
-						<img src="img/icons/close.svg" alt="">
-					</div>
-					<div class="popup-call__body">
-						<div class="popup-call__top">
-							<div class="popup-call__title">Заказать звонок</div>
-							<p>
-								Укажите контактные данные и наш менеджер свяжется с Вами
-							</p>
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Выберите город</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
 						</div>
-						<form data-dev data-popup-message="#thanks" action="#" method="POST" class="form">
-							<div class="form__body">
-								<div class="form__inputs">
-									<div class="form__input">
-										<input data-required autocomplete="off" name="name" type="text" name="form[]" placeholder="Имя">
+						<div class="popup-location">
+							<div class="popup-location__search">
+								<div class="popup-location__search-button">
+									<svg aria-hidden="true" width="17" height="17">
+										<use xlink:href="img/sprite.svg#search"></use>
+									</svg>
+								</div>
+								<input autocomplete="off" type="text" name="form[]" placeholder="Поиск по названию города">
+							</div>
+							<ul>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Москва</div>
+										<div class="popup-location__number">984</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Санкт-Петербург</div>
+										<div class="popup-location__number">819</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Казань</div>
+										<div class="popup-location__number">633</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Новосибирск</div>
+										<div class="popup-location__number">789</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Екатеринбург</div>
+										<div class="popup-location__number">501</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Нижний Новгород</div>
+										<div class="popup-location__number">452</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Ростов-на-Дону</div>
+										<div class="popup-location__number">635</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Самара</div>
+										<div class="popup-location__number">303</div>
+									</a>
+								</li>
+								<li>
+									<a href="./" class="popup-location-more">
+										<span>Все города</span>
+										<img src="img/icons/arrow2.svg" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="login" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Вход в профиль</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-login">
+							<div data-tabs class="popup-login__tabs">
+								<nav data-tabs-titles class="popup-login__navigation">
+									<button type="button" class="popup-login__title _tab-active">Телефон</button>
+									<button type="button" class="popup-login__title">E-mail</button>
+								</nav>
+								<div data-tabs-body class="popup-login__content">
+									<div class="popup-login__body">
+										<div class="popup-login__items">
+											<form action="#" class="popup-login-form">
+												<div class="popup-login-form__text">
+													Укажи свой номер телефона, чтобы войти. Мы отправим код подтверждения в SMS.
+												</div>
+												<div class="popup-login-form__inputs">
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Номер телефона</div>
+														<input data-required autocomplete="off" data-error="Пользователя с таким номером не существует!" type="text" name="form[]" placeholder="" class="telephone">
+
+													</div>
+													<!--При ошибке _form-error и .form-error появляются при клике на кнопку submit
+                                            <div class="popup-login-form__input _form-error">
+                                                <div class="popup-login-form__placeholder">Номер телефона</div>
+                                                <input data-required autocomplete="off"
+                                                    data-error="Пользователя с таким номером не существует!" type="text"
+                                                    name="form[]" placeholder="" class="telephone _form-error">
+                                                <div class="form-error">{data-error} из input</div>
+                                            </div>
+                                            -->
+												</div>
+												<label class="checkbox">
+													<input data-required class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<span class="checkbox__label">
+														<span class="checkbox__icon">
+															<img loading="lazy" src="img/icons/check1.svg" alt="">
+														</span>
+														<span class="checkbox__text">
+															Я принимаю <a href="./">Политику конфиденциальности</a>, даю
+															согласие на
+															<a href="./">обработку
+																персональных данных</a> и получение рассылок.
+														</span>
+													</span>
+												</label>
+												<button type="submit" class="btn disabled" data-popup="#code1">Войти</button>
+											</form>
+											<div class="popup-login__line">
+												<span>или</span>
+											</div>
+											<div class="popup-login__socials">
+												<a href="./">
+													<img loading="lazy" src="img/icons/vk1.svg" alt="">
+													<span>ВКонтакте</span>
+												</a>
+												<a href="./">
+													<img loading="lazy" src="img/icons/yandex1.svg" alt="">
+													<span>Яндекс</span>
+												</a>
+											</div>
+											<div class="popup-login__text">
+												Нет личного кабинета? <a href="./" data-popup="#registration">Зарегистрироваться</a>
+											</div>
+										</div>
 									</div>
-									<div class="form__input">
-										<input data-required autocomplete="off" name="phone" type="text" name="form[]" placeholder="Номер телефона" class="telephone">
+									<div class="popup-login__body">
+										<div class="popup-login__items">
+											<form action="#" class="popup-login-form">
+												<div class="popup-login-form__text">
+													Введи адрес электронной почты, чтобы войти в аккаунт. Ссылка для входа
+													придёт на твою почту.
+												</div>
+												<div class="popup-login-form__inputs">
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Адрес электронной почты</div>
+														<input data-required="email" autocomplete="off" data-error="Пользователя с таким адресом не существует!" type="text" name="form[]" placeholder="">
+													</div>
+												</div>
+												<label class="checkbox">
+													<input data-required class="checkbox__input" type="checkbox" value="2" name="form[]">
+													<span class="checkbox__label">
+														<span class="checkbox__icon">
+															<img loading="lazy" src="img/icons/check1.svg" alt="">
+														</span>
+														<span class="checkbox__text">
+															Я принимаю <a href="./">Политику конфиденциальности</a>, даю
+															согласие на
+															<a href="./">обработку
+																персональных данных</a> и получение рассылок.
+														</span>
+													</span>
+												</label>
+												<button type="submit" class="btn disabled" data-popup="#code2">Войти</button>
+											</form>
+											<div class="popup-login__line">
+												<span>или</span>
+											</div>
+											<div class="popup-login__socials">
+												<a href="./">
+													<img loading="lazy" src="img/icons/vk1.svg" alt="">
+													<span>ВКонтакте</span>
+												</a>
+												<a href="./">
+													<img loading="lazy" src="img/icons/yandex1.svg" alt="">
+													<span>Яндекс</span>
+												</a>
+											</div>
+											<div class="popup-login__text">
+												Нет личного кабинета? <a href="./" data-popup="#registration">Зарегистрироваться</a>
+											</div>
+										</div>
 									</div>
 								</div>
-								<button type="submit" class="btn">
-									<span>Отправить</span>
-								</button>
 							</div>
-							<div class="form__text">
-								Нажимая «Отправить» Вы принимаете <a href="./" data-popup="#personal-data">Пользовательское
-									соглашение</a> и
-								даете
-								согласие на обработку ваших данных
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="registration" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Регистрация</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
 							</div>
-						</form>
-						<!--
-                <form data-ajax data-popup-message="#thanks" action="sendmail-call.php" method="POST" class="form">
-                    <div class="form__body">
-                        <div class="form__inputs">
-                            <div class="form__input">
-                                <input data-required autocomplete="off" name="name" type="text" name="form[]"
-                                    placeholder="Имя">
-                            </div>
-                            <div class="form__input">
-                                <input data-required autocomplete="off" name="phone" type="text" name="form[]"
-                                    placeholder="Номер телефона" class="telephone">
-                            </div>
-                        </div>
-                        <button type="submit" class="btn">
-                            <span>Отправить</span>
-                        </button>
-                    </div>
-                    <div class="form__text">
-                        Нажимая «Отправить» Вы принимаете <a href="./" data-popup="#personal-data">Пользовательское
-                            соглашение</a> и
-                        даете
-                        согласие на обработку ваших данных
-                    </div>
-                </form>-->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="thanks" aria-hidden="true" class="popup popup-call">
-			<div class="popup__wrapper">
-				<div class="popup__content">
-					<div data-close class="popup__close">
-						<img src="img/icons/close.svg" alt="">
-					</div>
-					<div class="popup-call__body">
-						<div class="popup-call__top">
-							<div class="popup-call__title">Спасибо за заявку!</div>
+						</div>
+						<div class="popup-login">
+							<div class="popup-login__tabs">
+								<div class="popup-login__content">
+									<div class="popup-login__body">
+										<div class="popup-login__items">
+											<form action="#" class="popup-login-form">
+												<div class="popup-login-form__inputs">
+													<div class="popup-login-form__inputs2">
+														<div class="popup-login-form__input">
+															<div class="popup-login-form__placeholder">
+																Имя
+															</div>
+															<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+														</div>
+														<div class="popup-login-form__input">
+															<div class="popup-login-form__placeholder">
+																Фамилия
+															</div>
+															<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+														</div>
+													</div>
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Номер телефона</div>
+														<input data-required autocomplete="off" data-error="Пользователя с таким номером не существует!" type="text" name="form[]" placeholder="" class="telephone">
+													</div>
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Адрес электронной почты</div>
+														<input data-required="email" autocomplete="off" data-error="Пользователь с таким адресом уже есть!" type="text" name="form[]" placeholder="">
+													</div>
+												</div>
+												<label class="checkbox">
+													<input data-required class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<span class="checkbox__label">
+														<span class="checkbox__icon">
+															<img loading="lazy" src="img/icons/check1.svg" alt="">
+														</span>
+														<span class="checkbox__text">
+															Я принимаю <a href="./">Политику конфиденциальности</a>, даю
+															согласие на
+															<a href="./">обработку
+																персональных данных</a> и получение рассылок.
+														</span>
+													</span>
+												</label>
+												<button type="submit" class="btn disabled" data-popup="#code3">Создать
+													аккаунт</button>
+											</form>
+											<div class="popup-login__line">
+												<span>или</span>
+											</div>
+											<div class="popup-login__socials">
+												<a href="./">
+													<img loading="lazy" src="img/icons/vk1.svg" alt="">
+													<span>ВКонтакте</span>
+												</a>
+												<a href="./">
+													<img loading="lazy" src="img/icons/yandex1.svg" alt="">
+													<span>Яндекс</span>
+												</a>
+											</div>
+											<div class="popup-login__text">
+												Уже зарегистрированы? <a href="./" data-popup="#login">Войти</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="personal-data" aria-hidden="true" class="popup popup-doc">
+		<div id="code1" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
-					<div data-close class="popup__close">
-						<img src="img/icons/close.svg" alt="">
-					</div>
-					<div class="popup-doc__body">
-						<div class="popup-doc__title">
-							Согласие на обработку персональных данных
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Вход в профиль</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
 						</div>
-						<div>
-							В соответствии со статьями 23, 24 Конституции Российской Федерации, Федеральным законом от 27 июля
-							2006
-							г. № 152-ФЗ «О персональных данных», настоящим свободно, своей волей и в своем интересе, 
-							я, как субъект персональных данных, именуемый в дальнейшем Пользователь, отправляя (предоставляя)
-							информацию через формы обратной связи (далее по тексту – Форма, Формы) при прохождении процедуры
-							регистрации в целях использования сайта Оператора https://www.samaratravel.ru/ и/или его Сервисов
-							( по
-							тексту – Сайт, Сервис) выражаю (даю) полное, безоговорочное и однозначное Согласие на
-							автоматизированную
-							и неавтоматизированную обработку моих персональных данных (далее по тексту – Согласие), на следующих
-							условиях:
-						</div>
-						<div>
-							<strong>1. Согласие выдано:</strong> 
-							Обществу с ограниченной ответственностью «Профцентр-Самара» (ОГРН 1076319011317 ИНН 6319688110,
-							находится по адресу: г. Самара, ул. Молодогвардейская, 225), далее по тексту именуемый – Оператор
-							или
-							Общество).
-						</div>
-						<div>
-							<strong>2. Согласие выдано на предоставление, обработку персональных и иных данных
-								Пользователя,</strong> при
-							посещении
-							Сайта или Сервисов, или указанных Пользователем в Формах путем заполнения соответствующих текстовых
-							полей и/или прикрепленных к Формам файлов, а именно следующих категорий:
-							<ul>
-								<li>фамилия, имя, отчество, адрес электронной почты (e-mail), номер телефона, адрес регистрации
-									(проживания), другая аналогичная информация, сообщенная о себе Пользователем Сайта, согласно
-									которой
-									возможна идентификация Пользователя как субъекта персональных данных;
-								</li>
-								<li>данных, которые автоматически передаются в процессе просмотра и при посещении страниц Сайта:
-									IP-адрес,
-									информация/файлы cookies, информация о браузере, время доступа, адрес посещаемой страницы,
-									адрес
-									предыдущей страницы (реферер);
-								</li>
-								<li>статистика о IP-адресах Пользователя;</li>
-								<li>
-									данных, которые определяют посетителя Сайта Оператора, в порядке использования Оператором
-									программного
-									средства «Яндекс.Метрика», «Гугл Аналитика», сервиса «YandexSmartCaptha»;
-								</li>
-								<li>
-									автоматически определяемых персональных данных Посетителя сайта, собираемых при помощи
-									cookie.
-									(Примечание: Cookie - это файл с данными, который сохраняется на компьютере пользователя
-									после
-									посещения
-									сайта). В cookie могут храниться сведения о Пользователе, такие как: данные о
-									местоположении;
-									IP-адрес;
-									информация о действиях на сайте; добавленные для бронирования услуги и так далее.
-								</li>
-							</ul>
-						</div>
-						<div>
-							<strong>
-								3. Согласие выдано на обработку персональных данных в целях:
-							</strong>
-							<ul>
-								<li>
-									исполнения соглашений по предоставлению доступа к Сайту, его Содержанию и/или Сервису, к
-									функционалу
-									Сервиса;
-								</li>
-								<li>идентификации при регистрации на Сайте и/или при использовании Сервиса;</li>
-								<li>бронирования и оказания услуг, обработки запросов и заявок, проверки статуса заявки;</li>
-								<li>
-									установления обратной связи, включая направление уведомлений и запросов; 
-								</li>
-								<li>
-									подтверждения полноты предоставленных персональных данных;
-								</li>
-								<li>
-									заключения договоров, осуществления взаиморасчетов;
-								</li>
-								<li>
-									сбора Оператором статистики;
-								</li>
-								<li>
-									улучшения качества работы Сайта и/или его Сервиса, удобства их использования и разработки
-									новых
-									сервисов
-									и услуг;
-								</li>
-								<li>
-									проведения маркетинговых (рекламных) мероприятий, направления Оператором предложений и
-									получения
-									их
-									Пользователем для продвижения на рынке услуг Оператора, в том числе, путем осуществления
-									прямых
-									контактов.
-								</li>
-							</ul>
-							Пользователь, настоящим, подтверждает, осведомлен и согласен, что для вышеуказанных целей, Оператор
-							вправе собирать и использовать дополнительную информацию, связанную с Пользователем, получаемую в
-							процессе доступа Пользователя к Сайту, его Содержанию и/или Сервису, или от третьих лиц, и
-							включающую в
-							себя данные о технических средствах (в том числе, мобильных устройствах) и способах технологического
-							взаимодействия с Сайтом и/или его Сервисом (в т. ч. IP-адрес хоста, вид операционной системы
-							Пользователя, тип браузера, географическое положение, данные о провайдере и иное), об активности
-							Пользователя при использовании Сайта и/или его Сервиса, cookies, об информации об ошибках,
-							выдаваемых
-							Пользователю, о скачанных файлах, видео, инструментах, а также иные данные, получаемые з способами;
-							распоряжаться статистической информацией, связанной с функционированием Сайта и/или его Сервиса, а
-							также
-							информацией Пользователя для целей организации функционирования и технической поддержки Сайта и/или
-							его
-							Сервиса и исполнения условий законодательства РФ.
-						</div>
-						<div>
-							<strong>4. Согласие выдано на обработку персональных данных смешанным (автоматизированным и
-								неавтоматизированным) способом.</strong>
-							<strong>
-								В процессе обработки персональных данных Оператор вправе осуществлять:
-							</strong>
-							<ul>
-								<li>
-									сбор, запись, систематизацию,
-									накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу
-									(распространение, предоставление, доступ), обезличивание, блокирование, удаление,
-									уничтожение
-									персональных данных Пользователя в документарной и электронной форме.
-								</li>
-							</ul>
-							<p>
-								Оператор вправе использовать программное средство (сервис) Яндекс-Метрика и Гугл Аналитика,
-								использование функционала которого позволяет определить Пользователя (посетителя) сайта
-								Оператора,
-								формировать сведения о его предпочтениях и поведения на Сайте Оператора.
-							</p>
-							<p>
-								Оператор, как владелец Сайта https://www.samaratravel.ru, который посещает Пользователь,
-								использует
-								сервис «YandexSmartCaptha» (Сервис). Указанный Сервис необходим для верификации запросов и
-								блокировки
-								роботов. Благодаря Сервису, пользование Сайтом становится более удобным, так как Пользователю не
-								придется размечать «картинки», поскольку в большинстве случаев достаточно кликнуть «Я не робот»,
-								или
-								Сервис самостоятельно верифицирует вход на Сайт. 
-							</p>
-							<p>
-								Для функционирования Сервиса, Оператор (владелец Сайта) поручил ООО «Яндекс.Облако» (Яндекс)
-								осуществлять сбор и обработку технических данных об устройстве Пользователя, его активности и
-								цифровом
-								отпечатке (token, browser features, referer, timezone и т.д.). Эти данные собираются при
-								использовании
-								Пользователем Сайта или его отдельных страниц, на которых установлен виджет Сервиса.
-							</p>
-						</div>
-						<div>
-							<strong>5. Настоящим Согласием Пользователь подтверждает, что:</strong>
-							<ul>
-								<li>
-									Ознакомлен и согласен с тем, что передача персональных данных пользователя третьим лицам
-									может
-									осуществляться Оператором в объеме, необходимом для получения Пользователем доступа к сайту
-									(его
-									содержанию и/или его сервису). Третьими лицами является неограниченный круг лиц, включая
-									туроператоров
-									(юридических лиц, внесенных в Единый реестр туроператоров), агентов (юридических лиц,
-									внесенных
-									в
-									Единый
-									Федеральный Реестр Туристических Агентств), поставщиков и исполнителей услуг, а также
-									третьих
-									лиц.
-								</li>
-								<li>
-									Проинформирован о возможности отзыва согласия на основании положений ФЗ от 27.07.2006 №
-									152-ФЗ
-									«О
-									персональных данных» путем личного обращения или направления письменного обращения (в том
-									числе
-									в
-									форме
-									электронного документа, подписанного простой электронной подписью или усиленной
-									квалифицированной
-									электронной подписью), на имя руководителя Оператора.
-								</li>
-								<li>
-									Проинформирован, что лица, указанные в пункте 1 настоящего Согласия, вправе продолжать
-									обработку
-									персональных данных Пользователя после получения отзыва Согласия, а равно после истечения
-									срока
-									действия
-									Согласия, при наличии оснований, предусмотренных частью 2 статьи 9 Федерального закона от
-									27.07.2006
-									№
-									152-ФЗ «О персональных данных».
-									</p>
-								<li>
-									Даёт согласие на получение рекламно-информационных материалов Оператора и ознакомлен о
-									возможности
-									и
-									порядке совершения отказа от получения материалов.
-								</li>
-							</ul>
-						</div>
-						<div>
-							<strong>6. Согласие вступает в силу с момента его предоставления (отправки)</strong> Пользователем
-							Оператору и может
-							быть
-							отозвано Пользователем в порядке направления письменного заявления в произвольной форме в адрес
-							Оператора и/или по адресу электронной почты profcentre@sama.ru,  либо иным способом (вручением),
-							позволяющим однозначно определить факт его получения адресатом (Оператором).
-						</div>
-						<div>
-							<strong>7. Согласие действует в течение неопределенного срока до момента его отзыва</strong>
-							Пользователем. Согласие
-							прекращает свое действие с даты, указанной в заявлении Пользователя об отзыве Согласия на обработку
-							персональных данных, но не ранее даты, следующей за датой фактического получения Оператором отзыва
-							Согласия.
-						</div>
-						<div>
-							<strong>
-								8. Датой и временем формирования, подтверждения и отправки Согласия Оператору следует считать
-								момент
-								маркировки соответствующего «поля» на странице Сайта (либо нажатия на соответствующую кнопку) в
-								Форме
-								заполнения сведений и/или нажатие на кнопку отправки Формы на любой странице Сайта и/или его
-								Сервиса.
-							</strong>
-							Также аналогией вышеуказанным действиям является продолжение Пользователем использования Сервиса
-							Сайта,
-							которым Пользователь дает свое согласие Оператору на предоставление, обработку, передачу своих
-							персональных и иных данных Пользователя.
-						</div>
-						<div>
-							<strong>9. Руководствуясь ч. 4 ст. 9 ФЗ от 27.07.2006 № 152-ФЗ «О персональных данных»</strong>
-							через личное
-							мобильное
-							устройство или персональный компьютер путем прикрепления к специальной форме или при заполнении
-							соответствующих полей такой формы при прохождении процедуры регистрации на Сайте следует направить
-							свои
-							персональные данные.
-						</div>
-						<div>
-							<strong>10. Пользователь проинформирован,</strong> что ответственность перед ним за действия лица,
-							обрабатывающего
-							его
-							персональные данные по поручению Оператора, несет Оператор, выдавший соответствующее поручение.
+						<div class="popup-code">
+							<form action="#" class="popup-code__form">
+								<div class="popup-code__text">
+									Мы отправили пятизначный код подтверждения на указанный номер. Введи его ниже, чтобы
+									завершить вход.
+								</div>
+								<div class="popup-code__inputs">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+								</div>
+								<div class="popup-code__buttons">
+									<button type="submit" class="btn disabled">Подтвердить</button>
+									<a href="./" data-popup="#login" class="btn btn-light">Назад</a>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div id="policy" aria-hidden="true" class="popup popup-doc">
+		<div id="code2" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
-					<div data-close class="popup__close">
-						<img src="img/icons/close.svg" alt="">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Вход в профиль</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-code">
+							<form action="#" class="popup-code__form">
+								<div class="popup-code__text">
+									Мы отправили письмо с кодом подтверждения на твою почту. Введи код ниже, чтобы войти в
+									аккаунт.
+								</div>
+								<div class="popup-code__inputs">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+								</div>
+								<div class="popup-code__buttons">
+									<button type="submit" class="btn disabled">Подтвердить</button>
+									<a href="./" data-popup="#login" class="btn btn-light">Назад</a>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div class="popup-doc__body">
-						<div class="popup-doc__title">
-							ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ 
-							в отношении обработки персональных данных
+				</div>
+			</div>
+		</div>
+		<div id="code3" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Регистрация</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
 						</div>
-						<div>
-							<strong>1. Общие положения</strong>
-							<ol>
-								<li>
-									1.1. Политика конфиденциальности (обработки персональных данных- ПД) составлена в
-									соответствии с
-									требованиями п. 2 ч. 1 ст. 18.1 Федерального закона от 27.07.2006 № 152-ФЗ «О персональных
-									данных» (далее по тексту – Закон о персональных данных) и определяет порядок обработки
-									персональных данных и меры по обеспечению безопасности персональных данных, осуществляемые
-									юридическим лицом ООО «Профцентр-Самара» (ОГРН 1076319011317) (далее по тексту Оператор).
-								</li>
-								<li>
-									1.2. политика Оператора в отношении обработки персональных данных (далее по тексту –
-									Политика) применяется ко всей информации, которую Оператор может получить о посетителях
-									веб-сайта https://www.samaratravel.ru (далее по тексту – Сайт).
-								</li>
-								<li>
-									1.3. Использование сервисов Сайта означает согласие Пользователя с настоящей Политикой и
-									указанными в ней условиями обработки его персональной информации (персональных данных
-									Пользователя, перечисленных в настоящей Политике). В случае несогласия с этими условиями
-									(обработкой Оператором персональных данных) Пользователь должен воздержаться от
-									использования сервисов Сайта.
-								</li>
-								<li>
-									1.4. В рамках настоящей Политики под персональной информацией Пользователя понимаются:
-								</li>
-								<li>
-									1.4.1. Персональная информация, которую Пользователь предоставляет о себе самостоятельно при
-									регистрации (создании учетной записи) или в процессе использования Сервисов (сайта,
-									программ, продуктов), включая персональные данные Пользователя. Обязательная для
-									предоставления Сервисов информация помечена специальным образом. Иная информация
-									предоставляется Пользователем на его усмотрение.
-								</li>
-								<li>
-									1.4.2. Данные, которые автоматически передаются сервисам Сайта в процессе их использования с
-									помощью установленного на устройстве Пользователя программного обеспечения, в том числе
-									IP-адрес, данные файлов cookie, информация о браузере Пользователя (или иной программе, с
-									помощью которой осуществляется доступ к сервисам), технические характеристики оборудования и
-									программного обеспечения, используемых Пользователем, дата и время доступа к сервисам,
-									адреса запрашиваемых страниц и иная подобная информация.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>2. Понятия, используемые в Политике</strong> 
-							Понятия, содержащиеся в ст. 3 Закона о персональных данных, используются в настоящей Политике с
-							аналогичным значением.
-							<ol>
-								<li>
-									2.1. Автоматизированная обработка персональных данных – обработка персональных данных с
-									помощью средств вычислительной техники.
-								</li>
-								<li>
-									2.2. Блокирование персональных данных – временное прекращение обработки персональных данных
-									(за исключением случаев, если обработка необходима для уточнения персональных данных).
-								</li>
-								<li>
-									2.3. Сайт, веб-сайт – совокупность графических и информационных материалов, а также программ
-									для ЭВМ и баз данных, обеспечивающих их доступность в сети Интернет по сетевому адресу 
-									https://www.samaratravel.ru
-								</li>
-								<li>
-									2.4. Информационная система персональных данных – совокупность содержащихся в базах данных
-									персональных данных и обеспечивающих их обработку информационных технологий и технических
-									средств.
-								</li>
-								<li>
-									2.5. Обезличивание персональных данных – действия, в результате которых невозможно
-									определить без использования дополнительной информации принадлежность персональных данных
-									конкретному Пользователю или иному субъекту персональных данных.
-								</li>
-								<li>
-									2.6. Обработка персональных данных – любое действие (операция) или совокупность действий
-									(операций), совершаемых с использованием средств автоматизации или без использования таких
-									средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение,
-									уточнение (обновление, изменение), извлечение, использование, передачу (распространение,
-									предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных
-									данных.
-								</li>
-								<li>
-									2.7. Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо,
-									самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку
-									персональных данных, а также определяющие цели обработки персональных данных, состав
-									персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными
-									данными.
-								</li>
-								<li>
-									2.8. Персональные данные – любая информация, относящаяся прямо или косвенно к определенному
-									или определяемому физическому лицу - Пользователю
-									Сайта https://www.samaratravel.ru (субъекту персональных данных).
-								</li>
-								<li>
-									2.9. Персональные данные, разрешенные субъектом персональных данных для распространения –
-									персональные данные, доступ неограниченного круга лиц к которым предоставлен субъектом
-									персональных данных путем дачи согласия на обработку персональных данных, разрешенных
-									субъектом персональных данных для распространения в порядке, предусмотренном Законом о
-									персональных данных (далее – персональные данные, разрешенные для распространения).
-								</li>
-								<li>
-									2.10. Пользователь – любой посетитель cайта https://www.samaratravel.ru (субъект
-									персональных данных).
-								</li>
-								<li>
-									2.11. Предоставление персональных данных – действия, направленные на раскрытие персональных
-									данных определенному лицу или определенному кругу лиц.
-								</li>
-								<li>
-									2.12. Распространение персональных данных – любые действия, направленные на раскрытие
-									персональных данных неопределенному кругу лиц (передача персональных данных) или на
-									ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование
-									персональных данных в средствах массовой информации, размещение в
-									информационно-телекоммуникационных сетях или предоставление доступа к персональным данным
-									каким-либо иным способом.
-								</li>
-								<li>
-									2.13. Трансграничная передача персональных данных – передача персональных данных на
-									территорию иностранного государства органу власти иностранного государства, иностранному
-									физическому или иностранному юридическому лицу.
-								</li>
-								<li>
-									2.14. Уничтожение персональных данных – любые действия, в результате которых персональные
-									данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания
-									персональных данных в информационной системе персональных данных и (или) уничтожаются
-									материальные носители персональных данных.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>3. Права и обязанности Сторон</strong>
-							<ol>
-								<li>
-									3.1. Оператор имеет право:
-									<ul>
-										<li>
-											получать от субъекта персональных данных достоверные информацию и/или документы,
-											содержащие персональные данные;
-										</li>
-										<li>
-											в случае отзыва субъектом персональных данных согласия на обработку персональных
-											данных Оператор вправе продолжить обработку персональных данных без согласия
-											субъекта персональных данных при наличии оснований, указанных в Законе о
-											персональных данных;
-										</li>
-										<li>
-											самостоятельно определять состав и перечень мер, необходимых и достаточных для
-											обеспечения выполнения обязанностей, предусмотренных Законом о персональных данных и
-											принятыми в соответствии с ним нормативными правовыми актами, если иное не
-											предусмотрено Законом о персональных данных или другими федеральными законами.
-										</li>
-									</ul>
-								</li>
-								<li>
-									3.2. Оператор обязан:
-									<ul>
-										<li>
-											предоставлять субъекту персональных данных по его просьбе информацию, касающуюся
-											обработки его персональных данных;
-										</li>
-										<li>
-											организовывать обработку персональных данных в порядке, установленном действующим
-											законодательством РФ;
-										</li>
-										<li>
-											отвечать на обращения и запросы субъектов персональных данных и их законных
-											представителей в соответствии с требованиями Закона о персональных данных;
-										</li>
-										<li>
-											сообщать в уполномоченный орган по защите прав субъектов персональных данных по
-											запросу этого органа необходимую информацию в течение 10 рабочих дней с даты
-											получения такого запроса;
-										</li>
-										<li>
-											публиковать или иным образом обеспечивать неограниченный доступ к настоящей Политике
-											в отношении обработки персональных данных;
-										</li>
-										<li>
-											принимать правовые, организационные и технические меры для защиты персональных
-											данных от неправомерного или случайного доступа к ним, уничтожения, изменения,
-											блокирования, копирования, предоставления, распространения персональных данных, а
-											также от иных неправомерных действий в отношении персональных данных;
-										</li>
-										<li>
-											прекратить передачу (распространение, предоставление, доступ) персональных данных,
-											прекратить обработку и уничтожить персональные данные в порядке и случаях,
-											предусмотренных Законом о персональных данных;
-										</li>
-										<li>
-											исполнять иные обязанности, предусмотренные Законом о персональных данных.
-										</li>
-									</ul>
-								</li>
-								<li>
-									3.3. Пользователь (субъект персональных данных) имеет право:
-									<ul>
-										<li>
-											получать информацию, касающуюся обработки их персональных данных, за исключением
-											случаев, предусмотренных федеральными законами. Сведения предоставляются субъекту
-											персональных данных Оператором в доступной форме, и в них не должны содержаться
-											персональные данные, относящиеся к другим субъектам персональных данных, за
-											исключением случаев, когда имеются законные основания для раскрытия таких
-											персональных данных. Перечень информации и порядок ее получения установлены Законом
-											о персональных данных;
-										</li>
-										<li>
-											требовать от оператора уточнения его персональных данных, их блокирования или
-											уничтожения в случае, если персональные данные являются неполными, устаревшими,
-											неточными, незаконно полученными или не являются необходимыми для заявленной цели
-											обработки, а также принимать предусмотренные законом меры по защите своих прав;
-										</li>
-										<li>
-											выдвигать условие предварительного согласия при обработке персональных данных в
-											целях продвижения на рынке товаров, работ и услуг;
-										</li>
-										<li>на отзыв согласия на обработку персональных данных;</li>
-										<li>
-											обжаловать в уполномоченный орган по защите прав субъектов персональных данных или в
-											судебном порядке неправомерные действия или бездействие Оператора при обработке его
-											персональных данных;
-										</li>
-										<li>
-											на осуществление иных прав, предусмотренных законодательством РФ.
-										</li>
-									</ul>
-								</li>
-								<li>
-									3.4. Субъект персональных данных обязан:
-									<ul>
-										<li>
-											предоставлять Оператору достоверные данные о себе;
-										</li>
-										<li>
-											предоставить информацию о персональных данных, необходимую для пользования Сайтом;
-										</li>
-										<li>
-											сообщать Оператору об уточнении (обновлении, дополнении) своих персональных данных в
-											случае изменения данной информации.
-										</li>
-									</ul>
-								</li>
-								<li>
-									3.5. Лица, передавшие Оператору недостоверные сведения о себе либо сведения о другом
-									субъекте персональных данных без согласия последнего, несут ответственность в соответствии с
-									законодательством РФ.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>4. Перечень персональных данных Пользователя, которые обрабатывает Оператор</strong>
-							<ol>
-								<li>
-									4.1. Оператор обрабатывает данные Пользователя:
-									<ul>
-										<li>
-											Фамилия, имя, отчество;
-										</li>
-										<li>Дата и место рождения;</li>
-										<li>Адрес личной электронной почты;</li>
-										<li>Номер личного мобильного/домашнего телефона;</li>
-										<li>Адрес регистрации (проживания);</li>
-										<li>
-											Паспортные данные;
-										</li>
-										<li>
-											Иные персональные данные (относящиеся к Пользователю);
-										</li>
-										<li>
-											На Сайте Оператора происходит сбор и обработка обезличенных данных о
-											посетителях/пользователях (в том числе файлов cookie) с помощью сервисов
-											интернет-статистики – программных средств «Яндекс.Метрика», «Гугл Аналитика» и
-											других. Указанные программные средства (сервисы) позволяют определить Пользователя
-											Сайта, формировать сведения о его предпочтениях и поведения на Сайте Оператора.
-										</li>
-									</ul>
-								</li>
-								<li>
-									4.2. Вышеперечисленные данные Пользователя по тексту Политики объединены общим понятием
-									«Персональные данные». 
-								</li>
-								<li>
-									4.3. При использовании Сервиса Сайта Пользователь дает свое согласие Оператору на обработку
-									персональных данных (указанных в п. 4.1. Политики), передачу (в том числе трансграничную)
-									персональных данных третьим лицам в письменной или электронной форме.
-								</li>
-								<li>
-									4.4. Передача (распространение, предоставление, доступ) персональных данных, разрешенных
-									субъектом персональных данных для распространения, должна быть прекращена в любое время по
-									требованию Пользователя. Данное требование должно включать в себя фамилию, имя, отчество
-									(при
-									наличии), контактную информацию (номер телефона, адрес электронной почты или почтовый адрес)
-									Пользователя, а также перечень персональных данных, обработка которых подлежит прекращению.
-									Указанные в данном требовании персональные данные могут обрабатываться только Оператором,
-									которому оно направлено.
-								</li>
-								<li>
-									4.5. Согласие на обработку персональных данных, разрешенных для распространения, прекращает
-									свое
-									действие с момента поступления Оператору требования, указанного в пункте 4.4. настоящей
-									Политики
-									в отношении обработки персональных данных Пользователя.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>5. Цели обработки персональных данных</strong>
-							<ol>
-								<li>
-									5.1. Персональные данные Пользователя обрабатываются Оператором в следующих целях:
-									<ul>
-										<li>
-											Идентификации Пользователя, зарегистрированного на Сайте; 
-											Предоставления Пользователю доступа к ресурсам Сайта (включая персонализированные);
-											Предоставления доступа Пользователю к сервисам, информации и/или материалам,
-											содержащимся на
-											Сайте https://www.samaratravel.ru;
-										</li>
-										<li>
-											Заказа/бронирования услуг Пользователем;
-										</li>
-										<li>
-											Информирования Пользователя, посредством отправки электронных писем;
-										</li>
-										<li>
-											Установления с Пользователем обратной связи, включая направление уведомлений,
-											запросов,
-											подтверждений, касающихся использования Сайта, бронирования и оказания услуг,
-											обработку
-											заказов
-											(запросов) и заявок от Пользователя;
-										</li>
-										<li>
-											Создания учетной записи для бронирования/заказа услуг, если Пользователь дал
-											согласие на
-											создание
-											учетной записи;
-										</li>
-										<li>
-											Уведомления Пользователя Сайта о бронировании;
-										</li>
-										<li>
-											Предоставления Пользователю Сайта клиентской и технической поддержки при
-											возникновении
-											проблем,
-											связанных с использованием Сайта. 
-										</li>
-									</ul>
-								</li>
-								<li>
-									5.2. Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах,
-									специальных предложениях и различных событиях. Пользователь всегда может отказаться от
-									получения
-									информационных сообщений, направив Оператору письмо на адрес электронной
-									почты profcentre@sama.ru с пометкой «Отказ от уведомлений о новых продуктах и услугах и
-									специальных предложениях».
-								</li>
-								<li>
-									5.3. Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики
-									(cookie, «Яндекс.Метрика», «Гугл Аналитика» и др.), служат для сбора информации о действиях
-									Пользователей на Сайте, улучшения качества Сайта и его содержания.
-								</li>
-								<li>
-									5.4. Оператор, как владелец Сайта https://www.samaratravel.ru, который посещает
-									Пользователь,
-									использует сервис «YandexSmartCaptha» (Сервис). Указанный Сервис необходим для верификации
-									запросов и блокировки роботов. Благодаря Сервису, пользование Сайтом становится более
-									удобным,
-									так как Пользователю не придется размечать «картинки», поскольку в большинстве случаев
-									достаточно кликнуть «Я не робот», или Сервис самостоятельно верифицирует вход на Сайт. 
-								</li>
-							</ol>
-							<p>
-								Для функционирования Сервиса, Оператор (владелец Сайта) поручил ООО «Яндекс.Облако» (Яндекс)
-								осуществлять сбор и обработку технических данных об устройстве Пользователя, его активности и
-								цифровом отпечатке (token, browserfeatures, referer, timezone и т.д.). Эти данные собираются при
-								использовании Пользователем Сайта или его отдельных страниц, на которых установлен виджет
-								Сервиса. Яндекс использует данные только для целей функционирования и поддержания Сервиса
-								оператора Сайта. При этом, Яндекс не имеет возможности достоверно идентифицировать Пользователя,
-								а также, по истечении 60 дней с даты сбора, удаляет соответствующие данные.
-							</p>
-						</div>
-						<div>
-							<strong>
-								6. Правовые основания обработки персональных данных. 
-							</strong>
-							<ol>
-								<li>
-									6.1. Правовыми основаниями обработки персональных данных Оператором являются:
-									<ul>
-										<li>
-											уставные (учредительные) документы Оператора;
-										</li>
-										<li>
-											федеральные законы, иные нормативно-правовые акты в сфере защиты персональных
-											данных;
-										</li>
-										<li>
-											согласия Пользователей на обработку их персональных данных, на обработку
-											персональных данных, разрешенных для распространения.
-
-										</li>
-									</ul>
-								</li>
-								<li>
-									6.2. Оператор обрабатывает персональные данные Пользователя только в случае их заполнения
-									и/или
-									отправки Пользователем самостоятельно через специальные формы, расположенные на
-									сайте https://www.samaratravel.ru или направленные Оператору посредством электронной почты.
-									Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору,
-									Пользователь
-									выражает свое согласие с данной Политикой.
-								</li>
-								<li>
-									6.3. Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в
-									настройках браузера Пользователя (включено сохранение файлов cookie и использование
-									технологии JavaScript).
-								</li>
-								<li>
-									6.4. Пользователь самостоятельно принимает решение о предоставлении его персональных данных
-									и
-									дает согласие свободно, своей волей и в своем интересе.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>
-								7. Использование метрических программ Google Analytics и Яндекс.Метрика.
-							</strong>
-							<ol>
-								<li>
-									7.1. Оператор использует метрические программы - средства “Google Analytics” и
-									“Яндекс.Метрика”
-									для
-									сбора сведений об использовании Сайта, таких как частота посещения Сайта пользователями,
-									посещенные
-									страницы и сайты, на которых были пользователи до перехода на данный Сайт. Google Analytics
-									и
-									Яндекс.Метрика собирает только IP-адреса, назначенные вам в день посещения данного Сайта, но
-									не
-									имя
-									или другие идентификационные сведения (обезличенные данные).
-								</li>
-								<li>
-									7.2. Google Analytics и Яндекс.Метрика размещает постоянный cookie-файл в веб-браузере
-									Пользователя
-									для идентификации его в качестве уникального пользователя при следующем посещении Сайта
-									Оператора.
-									Этот cookie-файл не может использоваться никем, кроме Google, Inc и Яндекс соответственно.
-									Сведения,
-									собранные с помощью cookie-файла, будут передаваться в Google и храниться на серверах этой
-									корпорации или в Яндекс.
-								</li>
-								<li>
-									7.3. Оператор использует сведения, полученные через Google Analytics и Яндекс.Метрику,
-									только в
-									целях совершенствования услуг на Сайте Оператора. Оператор не объединяет сведения,
-									полученные
-									через
-									Google Analytics и Яндекс,Метрику, с персональными сведениями Пользователя.
-								</li>
-								<li>
-									7.4. Возможности Google и Яндекс по использованию и передаче третьим лицам сведений,
-									собранных
-									средством Google Analytics и Яндекс.Метрики о посещениях данного Сайта, ограничиваются
-									Политикой
-									конфиденциальности Google и Яндекс.
-								</li>
-							</ol>
-							<p>
-								Пользователь может запретить Google Analytics и Яндекс.Метрике узнавать его при повторных
-								посещениях Сайта Оператора, отключив cookie-файлы Google Analytics и Яндекс.Метрики в своем
-								браузере (в настройках браузера) или Пользователь может использовать Блокировщик Google
-								Analytics. Однако это может повлиять на работу некоторых функций Сайта. Используя Сайт
-								Оператора, Пользователь соглашается на обработку данных о нем Google Analytics и Яндекс.Метрикой
-								в порядке и целях, указанных выше и по тексту настоящей Политики конфиденциальности.
-							</p>
-						</div>
-						<div>
-							<strong>8. Порядок, условия и сроки обработки персональных данных</strong>
-							<ol>
-								<li>
-									8.1. Обработка персональных данных Оператором осуществляется следующими способами:
-									<ul>
-										<li>Неавтоматизированная обработка персональных данных;</li>
-										<li>
-											Автоматизированная обработка персональных данных с передачей полученной информации
-											по информационно-телекоммуникационным сетям или без передачи;
-										</li>
-										<li>
-											Смешанная обработка персональных данных.
-										</li>
-									</ul>
-								</li>
-								<li>
-									8.2. Перечень действий, совершаемых оператором с персональными данными Пользователя: сбор,
-									запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение,
-									использование, распространение (в том числе передача), обезличивание, блокирование,
-									уничтожение/удаление, а также осуществление любых иных действий в соответствии с действующим
-									законодательством РФ.
-								</li>
-								<li>
-									8.3. Обработка персональных данных осуществляется с согласия субъекта персональных данных на
-									обработку его персональных данных.
-								</li>
-								<li>
-									8.4. Пользователь принимает решение о предоставлении его персональных данных и дает Согласие
-									свободно, своей волей и в своем интересе.
-								</li>
-								<li>
-									8.5. Согласие дается в любой позволяющей подтвердить факт его получения форме. В
-									предусмотренных
-									законодательством РФ случаях Согласие оформляется в письменной форме.
-								</li>
-								<li>
-									8.6. Обработка персональных данных необходима для исполнения договора, стороной которого
-									либо
-									выгодоприобретателем по которому является субъект персональных данных, а также для
-									заключения
-									договора по инициативе субъекта персональных данных или договора, по которому субъект
-									персональных данных будет являться выгодоприобретателем.
-								</li>
-								<li>
-									8.7. Обработка персональных данных необходима для осуществления прав и законных интересов
-									оператора или третьих лиц либо для достижения общественно значимых целей при условии, что
-									при
-									этом не нарушаются права и свободы субъекта персональных данных.
-								</li>
-								<li>
-									8.8. Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается
-									путем
-									реализации правовых, организационных и технических мер, необходимых для выполнения в полном
-									объеме требований действующего законодательства в области защиты персональных данных.
-								</li>
-								<li>
-									8.9. Оператор обеспечивает сохранность персональных данных и принимает все возможные меры,
-									исключающие доступ к персональным данным неуполномоченных лиц. Оператор при обработке
-									персональных данных обеспечивает конфиденциальность персональных данных.
-								</li>
-								<li>
-									8.10. Персональные данные Пользователя никогда, ни при каких условиях не будут переданы
-									третьим
-									лицам, за исключением случаев, связанных с исполнением действующего законодательства, либо в
-									случае, если субъектом персональных данных дано согласие Оператору на передачу данных
-									третьему
-									лицу для исполнения обязательств по гражданско-правовому договору.
-								</li>
-								<li>
-									8.11. Срок обработки персональных данных определяется достижением целей, для которых были
-									собраны персональные данные, если иной срок не предусмотрен договором или действующим
-									законодательством.
-									Пользователь может в любой момент отозвать свое согласие на обработку персональных данных,
-									направив Оператору уведомление посредством электронной почты на электронный адрес
-									Оператора profcentre@sama.ru  с пометкой «Отзыв согласия на обработку персональных данных».
-								</li>
-								<li>
-									8.12. Вся информация, которая собирается сторонними сервисами, в том числе платежными
-									системами,
-									средствами связи и другими поставщиками услуг, хранится и обрабатывается указанными лицами
-									(Операторами) в соответствии с их Пользовательским соглашением и Политикой
-									конфиденциальности.
-									Субъект персональных данных обязан самостоятельно своевременно ознакомиться с указанными
-									документами. Оператор не несет ответственность за действия третьих лиц, в том числе
-									указанных в
-									настоящем пункте поставщиков услуг.
-								</li>
-								<li>
-									8.13. Установленные субъектом персональных данных запреты на передачу (кроме предоставления
-									доступа), а также на обработку или условия обработки (кроме получения доступа) персональных
-									данных, разрешенных для распространения, не действуют в случаях обработки персональных
-									данных в
-									государственных, общественных и иных публичных интересах, определенных законодательством РФ.
-								</li>
-								<li>
-									8.14. Оператор осуществляет хранение персональных данных в форме, позволяющей определить
-									субъекта персональных данных, не дольше, чем этого требуют цели обработки персональных
-									данных,
-									если срок хранения персональных данных не установлен федеральным законом, договором,
-									стороной
-									которого или выгодоприобретателем по которому является субъект персональных данных.
-								</li>
-								<li>
-									8.15. Условием прекращения обработки персональных данных может являться достижение целей
-									обработки персональных данных, истечение срока действия согласия субъекта персональных
-									данных
-									или отзыв согласия субъектом персональных данных, а также выявление неправомерной обработки
-									персональных данных.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>9. Трансграничная передача персональных данных </strong>
-							<ol>
-								<li>
-									9.1. Оператор не осуществляет трансграничную передачу персональных данных иностранным
-									государствам, является агентом по выездному туризму согласно ФЗ 132. .
-								</li>
-								<li>
-									9.2. Трансграничная передача персональных данных на территории иностранных государств может
-									осуществляться туроператором по выездному туризму, агентом которого выступает Оператор, и
-									только в случае наличия согласия в письменной форме субъекта персональных данных на
-									трансграничную передачу его персональных данных и/или исполнения договора, стороной которого
-									является субъект персональных данных.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>10. Ответственность Сторон</strong>
-							<ol>
-								<li>
-									10.1. Оператор, не исполнивший свои обязательства, несёт ответственность за убытки,
-									понесённые Пользователем в связи с неправомерным использованием персональных данных, в
-									соответствии с законодательством Российской Федерации.
-								</li>
-								<li>
-									10.2. В случае утраты или разглашения конфиденциальной информации Оператор не несёт
-									ответственность, если данная конфиденциальная информация:
-								</li>
-								<li>10.2.1. Стала публичным достоянием до её утраты или разглашения;</li>
-								<li>10.2.2. Была получена от третьей стороны до момента её получения Оператором;</li>
-								<li>10.2.3. Была разглашена с согласия Пользователя.</li>
-							</ol>
-						</div>
-						<div>
-							<strong>11. Разрешение споров</strong>
-							<ol>
-								<li>
-									11.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем
-									Оператором, обязательным является предъявление претензии (письменного предложения о
-									добровольном урегулировании спора).
-								</li>
-								<li>
-									11.2. Получатель претензии в течение 20 календарных дней со дня получения претензии
-									письменно уведомляет заявителя претензии о результатах рассмотрения претензии.
-								</li>
-								<li>
-									11.3. При не достижении соглашения спор будет передан на рассмотрение в суд в соответствии с
-									действующим законодательством РФ.
-								</li>
-								<li>
-									11.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Оператором
-									применяется действующее законодательство РФ.
-								</li>
-							</ol>
-						</div>
-						<div>
-							<strong>
-								12. Дополнительные условия
-							</strong>
-							<ol>
-								<li>
-									12.1. Оператор вправе вносить изменения в настоящую Политику конфиденциальности без согласия
-									Пользователя, в том числе, чтобы отражать изменения в объеме оказываемых Оператором услуг
-									или изменения в функциональности Сайта (сервисов), а также изменения законодательства.
-								</li>
-								<li>
-									12.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте,
-									если иное не предусмотрено новой редакцией Политики конфиденциальности.
-								</li>
-								<li>
-									12.3. Действующая Политика конфиденциальности размещена на странице сайта Оператора по
-									адресу:  https://www.samaratravel.ru
-								</li>
-							</ol>
+						<div class="popup-code">
+							<form action="#" class="popup-code__form">
+								<div class="popup-code__text">
+									Мы отправили код подтверждения на указанный номер. Введи его ниже, чтобы завершить вход.
+								</div>
+								<div class="popup-code__inputs">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+								</div>
+								<div class="popup-code__buttons">
+									<button type="submit" class="btn disabled">Подтвердить</button>
+									<a href="./" data-popup="#login" class="btn btn-light">Назад</a>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>

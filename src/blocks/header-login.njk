@@ -18,11 +18,14 @@
                     <li>
                         <a href="./">Журнал</a>
                     </li>
+                    <li class="header-favorites">
+                        <a href="./">Избранное</a>
+                    </li>
                 </ul>
-                <div class="header__buttons">
-                    <a href="./" data-popup="#login" class="btn">Войти</a>
-                    <a href="./" data-popup="#registration" class="btn btn-light">Зарегистрироваться</a>
-                </div>
+                <a href="./" class="header__avatar">
+                    <img src="img/avatar1.webp" alt="">
+                    <span>Максим Андерсон</span>
+                </a>
             </div>
             <div class="header-search">
                 <div class="header-search__buttons">
@@ -146,8 +149,12 @@
                         <use xlink:href="img/sprite.svg#search"></use>
                     </svg>
                 </button>
-                <a data-da=".header__menu, 820, 1" data-popup="#location" href="./"
-                    class="header__icon header-location">
+                <a href="./" class="header__icon header-favorites">
+                    <svg style="margin-right: -1px; margin-top: 1px;" aria-hidden="true" width="17" height="17">
+                        <use xlink:href="img/sprite.svg#heart1"></use>
+                    </svg>
+                </a>
+                <a data-da=".header__menu, 820, 2" data-popup="#location" href="./" class="header__icon header-location">
                     <svg aria-hidden="true" width="20" height="20">
                         <use xlink:href="img/sprite.svg#location"></use>
                     </svg>
@@ -160,7 +167,14 @@
                         <span></span>
                     </div>
                 </button>
-                <a href="./" class="btn" data-popup="#login">Войти</a>
+                <a href="./" class="header__icon header-login">
+                    <svg style="margin-right: -2px;" aria-hidden="true" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#exit"></use>
+                    </svg>
+                </a>
+                <a href="./" class="header__avatar">
+                    <img src="img/avatar1.webp" alt="">
+                </a>
             </div>
         </div>
     </div>
