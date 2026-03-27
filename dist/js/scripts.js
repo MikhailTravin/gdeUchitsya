@@ -1741,3 +1741,342 @@ function clearCodeInputs() {
 initCodeInputs();
 formSubmit();
 initFormValidationObserver();
+
+//========================================================================================================================================================
+
+function initFilters() {
+  const filterContainers = document.querySelectorAll('[data-filters]');
+
+  filterContainers.forEach(container => {
+    const filterTitles = container.querySelectorAll('.filter__title');
+    const filterBodies = container.querySelectorAll('[data-filter]');
+
+    if (!filterTitles.length) return;
+
+    function activateFilter(filterValue) {
+      filterTitles.forEach(title => {
+        if (title.getAttribute('data-filter') === filterValue) {
+          title.classList.add('active');
+        } else {
+          title.classList.remove('active');
+        }
+      });
+
+      filterBodies.forEach(body => {
+        if (body.getAttribute('data-filter') === filterValue) {
+          body.classList.add('active');
+        } else {
+          body.classList.remove('active');
+        }
+      });
+
+      const event = new CustomEvent('filterChanged', {
+        detail: {
+          container: container,
+          filterValue: filterValue
+        }
+      });
+      document.dispatchEvent(event);
+    }
+
+    filterTitles.forEach(title => {
+      title.addEventListener('click', function () {
+        const filterValue = this.getAttribute('data-filter');
+        if (filterValue) {
+          activateFilter(filterValue);
+        }
+      });
+    });
+
+    const activeFilter = container.querySelector('.filter__title.active');
+    if (activeFilter) {
+      const filterValue = activeFilter.getAttribute('data-filter');
+      if (filterValue) {
+        activateFilter(filterValue);
+      }
+    } else {
+      const firstFilter = filterTitles[0];
+      if (firstFilter) {
+        const filterValue = firstFilter.getAttribute('data-filter');
+        if (filterValue) {
+          activateFilter(filterValue);
+        }
+      }
+    }
+  });
+}
+initFilters();
+
+//========================================================================================================================================================
+
+if (document.querySelector('.block-reviews__slider')) {
+  const swiperReviews = new Swiper('.block-reviews__slider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 400,
+    navigation: {
+      prevEl: '.block-reviews-arrow-prev',
+      nextEl: '.block-reviews-arrow-next',
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+      1260: {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+      },
+    },
+    on: {
+      init: function () { checkSliderEnd(this); },
+      slideChange: function () { checkSliderEnd(this); },
+      resize: function () { checkSliderEnd(this); },
+      update: function () { checkSliderEnd(this); },
+      reachEnd: function () {
+        this.el.classList.add('is-end');
+      },
+      reachBeginning: function () {
+        this.el.classList.remove('is-end');
+      }
+    }
+  });
+}
+
+function initBlockChoiceSliders() {
+  let activeSlider = null;
+  
+  const blockChoice = document.querySelector('.block-choice');
+  const prevBtn = blockChoice?.querySelector('.arrow-prev');
+  const nextBtn = blockChoice?.querySelector('.arrow-next');
+  const filters = document.querySelectorAll('.filter__title');
+  
+  function destroyActiveSlider() {
+    if (activeSlider) {
+      activeSlider.destroy(true, true);
+      activeSlider = null;
+    }
+  }
+  
+  function initActiveSlider() {
+    const activeSliderEl = document.querySelector('.block-choice__slider.active');
+    if (!activeSliderEl) return;
+    
+    destroyActiveSlider();
+    
+    activeSlider = new Swiper(activeSliderEl, {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 400,
+      navigation: {
+        prevEl: prevBtn,
+        nextEl: nextBtn,
+      },
+      breakpoints: {
+        480: { slidesPerView: 'auto', spaceBetween: 20 },
+        768: { slidesPerView: 'auto', spaceBetween: 30 },
+        1260: { slidesPerView: 'auto', spaceBetween: 0 },
+      },
+      on: {
+        init: function () { checkSliderEnd(this); },
+        slideChange: function () { checkSliderEnd(this); },
+        resize: function () { checkSliderEnd(this); },
+        update: function () { checkSliderEnd(this); },
+        reachEnd: function () {
+          this.el.classList.add('is-end');
+        },
+        reachBeginning: function () {
+          this.el.classList.remove('is-end');
+        }
+      }
+    });
+  }
+  
+  function checkSliderEnd(swiperInstance) {
+    const slider = swiperInstance.el;
+    if (!slider) return;
+    
+    if (swiperInstance.isEnd) {
+      slider.classList.add('is-end');
+    } else {
+      slider.classList.remove('is-end');
+    }
+  }
+  
+  filters.forEach(filter => {
+    filter.addEventListener('click', function() {
+      const filterType = this.dataset.filter;
+      
+      filters.forEach(f => f.classList.remove('active'));
+      this.classList.add('active');
+      
+      document.querySelectorAll('.block-choice__slider').forEach(slider => {
+        if (slider.dataset.filter === filterType) {
+          slider.classList.add('active');
+        } else {
+          slider.classList.remove('active');
+        }
+      });
+      
+      setTimeout(() => {
+        initActiveSlider();
+      }, 50);
+    });
+  });
+  
+  initActiveSlider();
+  
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (activeSlider) {
+        activeSlider.update();
+      }
+    }, 250);
+  });
+}
+
+initBlockChoiceSliders();
+
+function checkSliderEnd(swiperInstance) {
+  const slider = swiperInstance.el;
+  if (!slider) return;
+
+  if (swiperInstance.isEnd) {
+    slider.classList.add('is-end');
+  } else {
+    slider.classList.remove('is-end');
+  }
+}
+
+function updateSlider(slider) {
+  if (slider.swiper) {
+    slider.swiper.update();
+    setTimeout(() => {
+      if (slider.swiper) checkSliderEnd(slider.swiper);
+    }, 50);
+  }
+}
+
+function updateSlidersInContainer(container) {
+  if (!container) return;
+
+  container.querySelectorAll('.swiper').forEach(slider => {
+    if (slider.swiper) {
+      updateSlider(slider);
+    }
+  });
+}
+
+document.addEventListener('filterChanged', (e) => {
+  setTimeout(() => {
+    const container = e.detail?.container;
+    if (container) {
+      updateSlidersInContainer(container);
+    }
+  }, 100);
+});
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.querySelectorAll('.swiper').forEach(slider => {
+      if (slider.swiper) updateSlider(slider);
+    });
+  }, 250);
+});
+
+//========================================================================================================================================================
+
+//Звездный рейтинг
+function formRating() {
+  const ratings = document.querySelectorAll('[data-rating]');
+  if (ratings) {
+    ratings.forEach(rating => {
+      const ratingValue = +rating.dataset.ratingValue;
+      const ratingSize = +rating.dataset.ratingSize ? +rating.dataset.ratingSize : 5;
+      formRatingInit(rating, ratingSize);
+      ratingValue ? formRatingSet(rating, ratingValue) : null;
+      document.addEventListener('click', formRatingAction);
+    });
+  }
+
+  function formRatingAction(e) {
+    const targetElement = e.target;
+    if (targetElement.closest('.rating__input')) {
+      const currentElement = targetElement.closest('.rating__input');
+      const ratingValue = +currentElement.value;
+      const rating = currentElement.closest('.rating');
+      const ratingSet = rating.dataset.rating === 'set';
+      ratingSet ? formRatingGet(rating, ratingValue) : null;
+    }
+  }
+
+  function formRatingInit(rating, ratingSize) {
+    let ratingItems = ``;
+    for (let index = 0; index < ratingSize; index++) {
+      index === 0 ? ratingItems += `<div class="rating__items">` : null;
+      ratingItems += `
+                <label class="rating__item">
+                    <input class="rating__input" type="radio" name="rating" value="${index + 1}">
+                </label>`;
+      index === ratingSize ? ratingItems += `</div">` : null;
+    }
+    rating.insertAdjacentHTML("beforeend", ratingItems);
+  }
+
+  function formRatingGet(rating, ratingValue) {
+    const resultRating = ratingValue;
+    formRatingSet(rating, resultRating);
+  }
+
+  function formRatingSet(rating, value) {
+    const ratingItems = rating.querySelectorAll('.rating__item');
+    const resultFullItems = parseInt(value);
+    const resultPartItem = value - resultFullItems;
+
+    rating.hasAttribute('data-rating-title') ? rating.title = value : null;
+
+    ratingItems.forEach((ratingItem, index) => {
+      ratingItem.classList.remove('rating__item--active');
+      ratingItem.querySelector('span') ? ratingItems[index].querySelector('span').remove() : null;
+
+      if (index <= (resultFullItems - 1)) {
+        ratingItem.classList.add('rating__item--active');
+      }
+      if (index === resultFullItems && resultPartItem) {
+        ratingItem.insertAdjacentHTML("beforeend", `<span style="width:${resultPartItem * 100}%"></span>`);
+      }
+    });
+  }
+
+  function formRatingSend() {
+  }
+}
+formRating();
+
+//========================================================================================================================================================
+
+const favoritesElements = document.querySelectorAll('.favorites');
+
+if (favoritesElements) {
+  favoritesElements.forEach(element => {
+    element.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      this.classList.toggle('active');
+
+      e.stopPropagation();
+    });
+  });
+}

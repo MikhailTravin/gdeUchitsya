@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<title>Страница с полным списком городов</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/fancybox.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+	</head>
+
+	<body class="preload mp">
+		<div class="main-wrapper-outer">
+			<header class="header">
+				<div class="container">
+					<div class="header__content">
+						<a href="./" class="header__logo">
+							<img src="img/icons/logo1.svg" alt="">
+						</a>
+						<div class="header__menu">
+							<ul>
+								<li>
+									<a href="./">Вузы</a>
+								</li>
+								<li>
+									<a href="./">Колледжи</a>
+								</li>
+								<li>
+									<a href="./">Курсы</a>
+								</li>
+								<li>
+									<a href="./">Журнал</a>
+								</li>
+							</ul>
+							<div class="header__buttons">
+								<a href="./" data-popup="#login" class="btn">Войти</a>
+								<a href="./" data-popup="#registration" class="btn btn-light">Зарегистрироваться</a>
+							</div>
+						</div>
+						<div class="header-search">
+							<div class="header-search__buttons">
+								<div class="header-search__button">
+									<svg aria-hidden="true" width="17" height="17">
+										<use xlink:href="img/sprite.svg#search"></use>
+									</svg>
+								</div>
+								<input autocomplete="off" type="text" name="form[]" placeholder="Учебное заведение, специальность">
+								<div class="header-search__close">
+									<svg aria-hidden="true" width="11" height="11">
+										<use xlink:href="img/sprite.svg#close1"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="header-search__dropdown">
+								<div class="header-search__column">
+									<div class="header-search__title">Учебные заведения</div>
+									<ul>
+										<li>
+											<a href="./">
+												<div class="header-search__icon icon-img">
+													<img loading="lazy" src="img/image2.webp" alt="">
+												</div>
+												<span>Московский государственный университет им. М. В. Ломоносова</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon icon-img">
+													<img loading="lazy" src="img/image3.webp" alt="">
+												</div>
+												<span>Национальный исследовательский университет «Высшая школа экономики»</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon icon-img">
+													<img loading="lazy" src="img/image4.webp" alt="">
+												</div>
+												<span>Санкт-Петербургский государственный университет</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="header-search__column">
+									<div class="header-search__title">Специальности</div>
+									<ul>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#hammer"></use>
+													</svg>
+												</div>
+												<span>Графический дизайн</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#hammer"></use>
+													</svg>
+												</div>
+												<span>Промышленный дизайн</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#hammer"></use>
+													</svg>
+												</div>
+												<span>Веб-дизайн</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="header-search__column">
+									<div class="header-search__title">Анонсы</div>
+									<ul>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#newspaper"></use>
+													</svg>
+												</div>
+												<span>Жизнь в кампусе: чего ожидать от студенческой жизни</span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#newspaper"></use>
+													</svg>
+												</div>
+												<span>Топ 10 популярных специальностей в 2026 году </span>
+											</a>
+										</li>
+										<li>
+											<a href="./">
+												<div class="header-search__icon">
+													<svg aria-hidden="true" width="20" height="20">
+														<use xlink:href="img/sprite.svg#newspaper"></use>
+													</svg>
+												</div>
+												<span>Как подготовиться к вступительным экзаменам без стресса</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="header__right">
+							<button type="button" class="header__icon header-search-button">
+								<svg aria-hidden="true" width="17" height="17">
+									<use xlink:href="img/sprite.svg#search"></use>
+								</svg>
+							</button>
+							<a data-da=".header__menu, 820, 1" data-popup="#location" href="./" class="header__icon header-location">
+								<svg aria-hidden="true" width="20" height="20">
+									<use xlink:href="img/sprite.svg#location"></use>
+								</svg>
+								<span>
+									Санкт-Петербург
+								</span>
+							</a>
+							<button type="button" class="header__icon header-burger">
+								<div class="icon-menu">
+									<span></span>
+								</div>
+							</button>
+							<a href="./" class="btn" data-popup="#login">Войти</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+
+				<div data-filters>
+
+					<div class="block-banner">
+						<div class="container">
+							<div class="block-banner__content">
+								<div class="block-banner__body">
+									<div class="block-banner__heading-complex">
+										<h1 class="title1">
+											Выбери город
+										</h1>
+										<p>
+											Выбери город и найди подходящий вуз.
+										</p>
+									</div>
+									<div class="filter">
+										<div data-filter="vuzy" class="filter__title active">Вузы</div>
+										<div data-filter="kolledzhi" class="filter__title">Колледжи</div>
+										<div data-filter="kursy" class="filter__title">Курсы</div>
+									</div>
+								</div>
+								<div class="block-banner__image">
+									<img src="img/image5.webp" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="block-cities">
+						<div class="container">
+							<div data-filter="vuzy" class="block-cities__body active">
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 1</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 2</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 3</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 4</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-filter="kolledzhi" class="block-cities__body">
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 5</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 6</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 7</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 8</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-filter="kursy" class="block-cities__body">
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 9</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 10</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 11</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+								<div class="block-cities__column">
+									<div class="block-cities__title">Область 12</div>
+									<ul>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+										<li>
+											<a href="./">Город</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</main>
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="footer-top__menu">
+							<div class="footer-top__column">
+								<div class="footer-top__title">Вузы России</div>
+								<ul>
+									<li>
+										<a href="./">Вузы Москвы</a>
+									</li>
+									<li>
+										<a href="./">Вузы Санкт-Петербурга</a>
+									</li>
+									<li>
+										<a href="./">Вузы Казани</a>
+									</li>
+									<li>
+										<a href="./">Вузы Нижнего Новгорода</a>
+									</li>
+									<li>
+										<a href="./">Вузы Челябинска</a>
+									</li>
+									<li>
+										<a href="./">Вузы Новосибирска</a>
+									</li>
+									<li>
+										<a href="./">Вузы Екатеринбурга</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-top__column">
+								<div class="footer-top__title">Колледжи России</div>
+								<ul>
+									<li>
+										<a href="./">Колледжи Москвы</a>
+									</li>
+									<li>
+										<a href="./">Колледжи Санкт-Петербурга</a>
+									</li>
+									<li>
+										<a href="./">Колледжи Казани</a>
+									</li>
+									<li>
+										<a href="./">Колледжи Нижнего Новгорода</a>
+									</li>
+									<li>
+										<a href="./">Колледжи Челябинска</a>
+									</li>
+									<li>
+										<a href="./">Колледжи Новосибирска</a>
+									</li>
+									<li>
+										<a href="./">Колледжи Екатеринбурга</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-top__column">
+								<div class="footer-top__title">Курсы</div>
+								<ul>
+									<li>
+										<a href="./">Подготовки к ЕГЭ</a>
+									</li>
+									<li>
+										<a href="./">Подготовки к ОГЭ</a>
+									</li>
+									<li>
+										<a href="./">Дизайн с нуля</a>
+									</li>
+									<li>
+										<a href="./">Frontend-разработка</a>
+									</li>
+									<li>
+										<a href="./">Интернет-маркетинг</a>
+									</li>
+									<li>
+										<a href="./">Data-аналитика</a>
+									</li>
+									<li>
+										<a href="./">Психология общения</a>
+									</li>
+								</ul>
+							</div>
+							<div class="footer-top__column">
+								<div class="footer-top__title">О проекте</div>
+								<ul>
+									<li>
+										<a href="./">Реклама на сайте</a>
+									</li>
+									<li>
+										<a href="./">Реклама</a>
+									</li>
+									<li>
+										<a href="./">Политика конфиденциальности</a>
+									</li>
+									<li>
+										<a href="./">Пользовательское соглашение</a>
+									</li>
+									<li>
+										<a href="./">Журнал "Где учиться?"</a>
+									</li>
+									<li>
+										<a href="./">Специальности вузов</a>
+									</li>
+									<li>
+										<a href="./">Специальности колледжей</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="footer-bottom__content">
+							<a href="./" class="footer-bottom__logo">
+								<img loading="lazy" src="img/icons/logo2.svg" alt="">
+							</a>
+							<div class="socials">
+								<a href="./">
+									<img loading="lazy" src="img/icons/telegram1.svg" alt="">
+								</a>
+								<a href="./">
+									<img loading="lazy" src="img/icons/vk1.svg" alt="">
+								</a>
+								<a href="./">
+									<img loading="lazy" src="img/icons/max1.svg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<div id="location" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Выберите город</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-location">
+							<div class="popup-location__search">
+								<div class="popup-location__search-button">
+									<svg aria-hidden="true" width="17" height="17">
+										<use xlink:href="img/sprite.svg#search"></use>
+									</svg>
+								</div>
+								<input autocomplete="off" type="text" name="form[]" placeholder="Поиск по названию города">
+							</div>
+							<ul>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Москва</div>
+										<div class="popup-location__number">984</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Санкт-Петербург</div>
+										<div class="popup-location__number">819</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Казань</div>
+										<div class="popup-location__number">633</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Новосибирск</div>
+										<div class="popup-location__number">789</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Екатеринбург</div>
+										<div class="popup-location__number">501</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Нижний Новгород</div>
+										<div class="popup-location__number">452</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Ростов-на-Дону</div>
+										<div class="popup-location__number">635</div>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<div class="popup-location__name">Самара</div>
+										<div class="popup-location__number">303</div>
+									</a>
+								</li>
+								<li>
+									<a href="./" class="popup-location-more">
+										<span>Все города</span>
+										<img src="img/icons/arrow2.svg" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="login" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Вход в профиль</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-login">
+							<div data-tabs class="popup-login__tabs">
+								<nav data-tabs-titles class="popup-login__navigation">
+									<button type="button" class="popup-login__title _tab-active">Телефон</button>
+									<button type="button" class="popup-login__title">E-mail</button>
+								</nav>
+								<div data-tabs-body class="popup-login__content">
+									<div class="popup-login__body">
+										<div class="popup-login__items">
+											<form action="#" class="popup-login-form">
+												<div class="popup-login-form__text">
+													Укажи свой номер телефона, чтобы войти. Мы отправим код подтверждения в SMS.
+												</div>
+												<div class="popup-login-form__inputs">
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Номер телефона</div>
+														<input data-required autocomplete="off" data-error="Пользователя с таким номером не существует!" type="text" name="form[]" placeholder="" class="telephone">
+
+													</div>
+													<!--При ошибке _form-error и .form-error появляются при клике на кнопку submit
+                                            <div class="popup-login-form__input _form-error">
+                                                <div class="popup-login-form__placeholder">Номер телефона</div>
+                                                <input data-required autocomplete="off"
+                                                    data-error="Пользователя с таким номером не существует!" type="text"
+                                                    name="form[]" placeholder="" class="telephone _form-error">
+                                                <div class="form-error">{data-error} из input</div>
+                                            </div>
+                                            -->
+												</div>
+												<label class="checkbox">
+													<input data-required class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<span class="checkbox__label">
+														<span class="checkbox__icon">
+															<img loading="lazy" src="img/icons/check1.svg" alt="">
+														</span>
+														<span class="checkbox__text">
+															Я принимаю <a href="./">Политику конфиденциальности</a>, даю
+															согласие на
+															<a href="./">обработку
+																персональных данных</a> и получение рассылок.
+														</span>
+													</span>
+												</label>
+												<button type="submit" class="btn disabled" data-popup="#code1">Войти</button>
+											</form>
+											<div class="popup-login__line">
+												<span>или</span>
+											</div>
+											<div class="popup-login__socials">
+												<a href="./">
+													<img loading="lazy" src="img/icons/vk1.svg" alt="">
+													<span>ВКонтакте</span>
+												</a>
+												<a href="./">
+													<img loading="lazy" src="img/icons/yandex1.svg" alt="">
+													<span>Яндекс</span>
+												</a>
+											</div>
+											<div class="popup-login__text">
+												Нет личного кабинета? <a href="./" data-popup="#registration">Зарегистрироваться</a>
+											</div>
+										</div>
+									</div>
+									<div class="popup-login__body">
+										<div class="popup-login__items">
+											<form action="#" class="popup-login-form">
+												<div class="popup-login-form__text">
+													Введи адрес электронной почты, чтобы войти в аккаунт. Ссылка для входа
+													придёт на твою почту.
+												</div>
+												<div class="popup-login-form__inputs">
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Адрес электронной почты</div>
+														<input data-required="email" autocomplete="off" data-error="Пользователя с таким адресом не существует!" type="text" name="form[]" placeholder="">
+													</div>
+												</div>
+												<label class="checkbox">
+													<input data-required class="checkbox__input" type="checkbox" value="2" name="form[]">
+													<span class="checkbox__label">
+														<span class="checkbox__icon">
+															<img loading="lazy" src="img/icons/check1.svg" alt="">
+														</span>
+														<span class="checkbox__text">
+															Я принимаю <a href="./">Политику конфиденциальности</a>, даю
+															согласие на
+															<a href="./">обработку
+																персональных данных</a> и получение рассылок.
+														</span>
+													</span>
+												</label>
+												<button type="submit" class="btn disabled" data-popup="#code2">Войти</button>
+											</form>
+											<div class="popup-login__line">
+												<span>или</span>
+											</div>
+											<div class="popup-login__socials">
+												<a href="./">
+													<img loading="lazy" src="img/icons/vk1.svg" alt="">
+													<span>ВКонтакте</span>
+												</a>
+												<a href="./">
+													<img loading="lazy" src="img/icons/yandex1.svg" alt="">
+													<span>Яндекс</span>
+												</a>
+											</div>
+											<div class="popup-login__text">
+												Нет личного кабинета? <a href="./" data-popup="#registration">Зарегистрироваться</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="registration" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Регистрация</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-login">
+							<div class="popup-login__tabs">
+								<div class="popup-login__content">
+									<div class="popup-login__body">
+										<div class="popup-login__items">
+											<form action="#" class="popup-login-form">
+												<div class="popup-login-form__inputs">
+													<div class="popup-login-form__inputs2">
+														<div class="popup-login-form__input">
+															<div class="popup-login-form__placeholder">
+																Имя
+															</div>
+															<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+														</div>
+														<div class="popup-login-form__input">
+															<div class="popup-login-form__placeholder">
+																Фамилия
+															</div>
+															<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+														</div>
+													</div>
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Номер телефона</div>
+														<input data-required autocomplete="off" data-error="Пользователя с таким номером не существует!" type="text" name="form[]" placeholder="" class="telephone">
+													</div>
+													<div class="popup-login-form__input">
+														<div class="popup-login-form__placeholder">Адрес электронной почты</div>
+														<input data-required="email" autocomplete="off" data-error="Пользователь с таким адресом уже есть!" type="text" name="form[]" placeholder="">
+													</div>
+												</div>
+												<label class="checkbox">
+													<input data-required class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<span class="checkbox__label">
+														<span class="checkbox__icon">
+															<img loading="lazy" src="img/icons/check1.svg" alt="">
+														</span>
+														<span class="checkbox__text">
+															Я принимаю <a href="./">Политику конфиденциальности</a>, даю
+															согласие на
+															<a href="./">обработку
+																персональных данных</a> и получение рассылок.
+														</span>
+													</span>
+												</label>
+												<button type="submit" class="btn disabled" data-popup="#code3">Создать
+													аккаунт</button>
+											</form>
+											<div class="popup-login__line">
+												<span>или</span>
+											</div>
+											<div class="popup-login__socials">
+												<a href="./">
+													<img loading="lazy" src="img/icons/vk1.svg" alt="">
+													<span>ВКонтакте</span>
+												</a>
+												<a href="./">
+													<img loading="lazy" src="img/icons/yandex1.svg" alt="">
+													<span>Яндекс</span>
+												</a>
+											</div>
+											<div class="popup-login__text">
+												Уже зарегистрированы? <a href="./" data-popup="#login">Войти</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="code1" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Вход в профиль</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-code">
+							<form action="#" class="popup-code__form">
+								<div class="popup-code__text">
+									Мы отправили пятизначный код подтверждения на указанный номер. Введи его ниже, чтобы
+									завершить вход.
+								</div>
+								<div class="popup-code__inputs">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+								</div>
+								<div class="popup-code__buttons">
+									<button type="submit" class="btn disabled">Подтвердить</button>
+									<a href="./" data-popup="#login" class="btn btn-light">Назад</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="code2" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Вход в профиль</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-code">
+							<form action="#" class="popup-code__form">
+								<div class="popup-code__text">
+									Мы отправили письмо с кодом подтверждения на твою почту. Введи код ниже, чтобы войти в
+									аккаунт.
+								</div>
+								<div class="popup-code__inputs">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+								</div>
+								<div class="popup-code__buttons">
+									<button type="submit" class="btn disabled">Подтвердить</button>
+									<a href="./" data-popup="#login" class="btn btn-light">Назад</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="code3" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__body">
+						<div class="popup__top">
+							<div class="popup__title">Регистрация</div>
+							<div data-close class="popup__close">
+								<svg aria-hidden="true" width="15" height="15">
+									<use xlink:href="img/sprite.svg#close1"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="popup-code">
+							<form action="#" class="popup-code__form">
+								<div class="popup-code__text">
+									Мы отправили код подтверждения на указанный номер. Введи его ниже, чтобы завершить вход.
+								</div>
+								<div class="popup-code__inputs">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+									<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+								</div>
+								<div class="popup-code__buttons">
+									<button type="submit" class="btn disabled">Подтвердить</button>
+									<a href="./" data-popup="#login" class="btn btn-light">Назад</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/inputmask.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/dynamic_adapt.js"></script>
+		<script src="js/simplebar.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+
+</html>
