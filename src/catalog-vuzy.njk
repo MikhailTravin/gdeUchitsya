@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Каталог вузов</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <a href="./" class="header__logo">
+                        <img src="img/icons/logo1.svg" alt="">
+                    </a>
+                    <div class="header__menu">
+                        <ul>
+                            <li>
+                                <a href="./" class="active">Вузы</a>
+                            </li>
+                            <li>
+                                <a href="./">Колледжи</a>
+                            </li>
+                            <li>
+                                <a href="./">Курсы</a>
+                            </li>
+                            <li>
+                                <a href="./">Журнал</a>
+                            </li>
+                        </ul>
+                        <div class="header__buttons">
+                            <a href="./" data-popup="#login" class="btn">Войти</a>
+                            <a href="./" data-popup="#registration" class="btn btn-light">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <div class="header-search__buttons">
+                            <div class="header-search__button">
+                                <svg aria-hidden="true" width="17" height="17">
+                                    <use xlink:href="img/sprite.svg#search"></use>
+                                </svg>
+                            </div>
+                            <input autocomplete="off" type="text" name="form[]"
+                                placeholder="Учебное заведение, специальность">
+                            <div class="header-search__close">
+                                <svg aria-hidden="true" width="11" height="11">
+                                    <use xlink:href="img/sprite.svg#close1"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="header-search__dropdown">
+                            <div class="header-search__column">
+                                <div class="header-search__title">Учебные заведения</div>
+                                <ul>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon icon-img">
+                                                <img loading="lazy" src="img/image2.webp" alt="">
+                                            </div>
+                                            <span>Московский государственный университет им. М. В. Ломоносова</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon icon-img">
+                                                <img loading="lazy" src="img/image3.webp" alt="">
+                                            </div>
+                                            <span>Национальный исследовательский университет «Высшая школа
+                                                экономики»</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon icon-img">
+                                                <img loading="lazy" src="img/image4.webp" alt="">
+                                            </div>
+                                            <span>Санкт-Петербургский государственный университет</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-search__column">
+                                <div class="header-search__title">Специальности</div>
+                                <ul>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#hammer"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Графический дизайн</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#hammer"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Промышленный дизайн</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#hammer"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Веб-дизайн</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-search__column">
+                                <div class="header-search__title">Анонсы</div>
+                                <ul>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#newspaper"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Жизнь в кампусе: чего ожидать от студенческой жизни</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#newspaper"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Топ 10 популярных специальностей в 2026 году </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#newspaper"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Как подготовиться к вступительным экзаменам без стресса</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <button type="button" class="header__icon header-search-button">
+                            <svg aria-hidden="true" width="17" height="17">
+                                <use xlink:href="img/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <a data-da=".header__menu, 820, 1" data-popup="#location" href="./"
+                            class="header__icon header-location">
+                            <svg aria-hidden="true" width="20" height="20">
+                                <use xlink:href="img/sprite.svg#location"></use>
+                            </svg>
+                            <span>
+                                Санкт-Петербург
+                            </span>
+                        </a>
+                        <button type="button" class="header__icon header-burger">
+                            <div class="icon-menu">
+                                <span></span>
+                            </div>
+                        </button>
+                        <a href="./" class="btn" data-popup="#login">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+
+            <div class="block-catalog">
+                <div class="container">
+                    <div class="block-catalog__heading-complex">
+                        <h1 class="title2">Государственные вузы Санкт-Петербурга</h1>
+                        <form action="#" class="filter-catalog">
+                            <div data-spollers="700,max" class="filter-catalog__inputs">
+                                <div class="filter-catalog__column spollers-item filled">
+                                    <div data-spoller class="filter-catalog__button">
+                                        <div class="filter-catalog__titles">
+                                            <div class="filter-catalog__title">
+                                                Тип вуза <span>Государственный</span>
+                                            </div>
+                                        </div>
+                                        <img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
+                                    </div>
+                                    <div class="filter-catalog__dropdowm">
+                                        <div class="options">
+                                            <label class="options__item">
+                                                <input hidden class="options__input" checked type="radio" value="1"
+                                                    name="option1">
+                                                <span class="options__label">
+                                                    <span class="options__text">Государственный</span>
+                                                </span>
+                                            </label>
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="2"
+                                                    name="option1">
+                                                <span class="options__label">
+                                                    <span class="options__text">Негосударственный</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__column spollers-item">
+                                    <div data-spoller class="filter-catalog__button">
+                                        <div class="filter-catalog__titles">
+                                            <div class="filter-catalog__title">
+                                                Форма обучения <span></span>
+                                            </div>
+                                        </div>
+                                        <img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
+                                    </div>
+                                    <div class="filter-catalog__dropdowm">
+                                        <div class="options">
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="1"
+                                                    name="option2">
+                                                <span class="options__label">
+                                                    <span class="options__text">Форма обучения1</span>
+                                                </span>
+                                            </label>
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="2"
+                                                    name="option2">
+                                                <span class="options__label">
+                                                    <span class="options__text">Форма обучения2</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__column spollers-item">
+                                    <div data-spoller class="filter-catalog__button">
+                                        <div class="filter-catalog__titles">
+                                            <div class="filter-catalog__title">
+                                                Образование <span></span>
+                                            </div>
+                                        </div>
+                                        <img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
+                                    </div>
+                                    <div class="filter-catalog__dropdowm">
+                                        <div class="options">
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="1"
+                                                    name="option3">
+                                                <span class="options__label">
+                                                    <span class="options__text">Образование1</span>
+                                                </span>
+                                            </label>
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="2"
+                                                    name="option3">
+                                                <span class="options__label">
+                                                    <span class="options__text">Образование2</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__column spollers-item">
+                                    <div data-spoller class="filter-catalog__button">
+                                        <div class="filter-catalog__titles">
+                                            <div class="filter-catalog__title">
+                                                Направления <span></span>
+                                            </div>
+                                        </div>
+                                        <img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
+                                    </div>
+                                    <div class="filter-catalog__dropdowm">
+                                        <div class="options">
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="1"
+                                                    name="option4">
+                                                <span class="options__label">
+                                                    <span class="options__text">Направления1</span>
+                                                </span>
+                                            </label>
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="2"
+                                                    name="option4">
+                                                <span class="options__label">
+                                                    <span class="options__text">Направления2</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__column spollers-item">
+                                    <div data-spoller class="filter-catalog__button">
+                                        <div class="filter-catalog__titles">
+                                            <div class="filter-catalog__title">
+                                                Специальность <span></span>
+                                            </div>
+                                        </div>
+                                        <img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
+                                    </div>
+                                    <div class="filter-catalog__dropdowm">
+                                        <div class="options">
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="1"
+                                                    name="option5">
+                                                <span class="options__label">
+                                                    <span class="options__text">Специальность1</span>
+                                                </span>
+                                            </label>
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="2"
+                                                    name="option5">
+                                                <span class="options__label">
+                                                    <span class="options__text">Специальность2</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-catalog__column spollers-item">
+                                    <div data-spoller class="filter-catalog__button">
+                                        <div class="filter-catalog__titles">
+                                            <div class="filter-catalog__title">
+                                                Дополнительно <span></span>
+                                            </div>
+                                        </div>
+                                        <img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
+                                    </div>
+                                    <div class="filter-catalog__dropdowm">
+                                        <div class="options">
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="1"
+                                                    name="option5">
+                                                <span class="options__label">
+                                                    <span class="options__text">Дополнительно1</span>
+                                                </span>
+                                            </label>
+                                            <label class="options__item">
+                                                <input hidden class="options__input" type="radio" value="2"
+                                                    name="option5">
+                                                <span class="options__label">
+                                                    <span class="options__text">Дополнительно2</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="block-catalog__contents">
+                        <div class="block-catalog-top">
+                            <div class="block-catalog-top__result">
+                                Найдено: 3 330 учебных заведений
+                            </div>
+                            <div class="block-catalog-top__sorting">
+                                <div class="block-catalog-top__sorting-title">Сортировать:</div>
+                                <select name="form[]" class="select">
+                                    <option value="1" selected>по умолчанию</option>
+                                    <option value="2">по стоимости</option>
+                                    <option value="3">по рейтингу</option>
+                                    <option value="4">по минимальному баллу</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="block-catalog__content">
+                            <div class="block-catalog__body">
+                                <div class="block-catalog__cards">
+                                    <div class="card-catalog card-advertising">
+                                        <div class="card-catalog__badges mob">
+                                            <div style="background: #169e5a;" class="card-catalog__badge">
+                                                <img src="img/icons/stars.svg" alt="">
+                                                <span>Мы рекомендуем</span>
+                                            </div>
+                                            <div class="card-catalog__badge">
+                                                <img src="img/icons/heart-white.svg" alt="">
+                                                <span>Выбор абитуриентов</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image4.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__text">Реклама</div>
+                                            <div class="card-catalog__badges desc">
+                                                <div style="background: #169e5a;" class="card-catalog__badge">
+                                                    <img src="img/icons/stars.svg" alt="">
+                                                    <span>Мы рекомендуем</span>
+                                                </div>
+                                                <div class="card-catalog__badge">
+                                                    <img src="img/icons/heart-white.svg" alt="">
+                                                    <span>Выбор абитуриентов</span>
+                                                </div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Санкт-Петербургский государственный университет
+                                                    <img src="img/icons/check2.svg" alt="">
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+                                            </a>
+                                            <div class="tags">
+                                                <div style="background: #e5f0ff; color: #2e7ae5;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #e5eaff; color: #5030f0;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #eae5ff; color: #a030f0;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-catalog card-advertising">
+                                        <div class="card-catalog__badges mob">
+                                            <div style="background: #169e5a;" class="card-catalog__badge">
+                                                <img src="img/icons/stars.svg" alt="">
+                                                <span>Мы рекомендуем</span>
+                                            </div>
+                                            <div class="card-catalog__badge">
+                                                <img src="img/icons/heart-white.svg" alt="">
+                                                <span>Выбор абитуриентов</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image35.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__text">Реклама</div>
+                                            <div class="card-catalog__badges desc">
+                                                <div style="background: #169e5a;" class="card-catalog__badge">
+                                                    <img src="img/icons/stars.svg" alt="">
+                                                    <span>Мы рекомендуем</span>
+                                                </div>
+                                                <div class="card-catalog__badge">
+                                                    <img src="img/icons/heart-white.svg" alt="">
+                                                    <span>Выбор абитуриентов</span>
+                                                </div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский физико-технический институт
+                                                    <img src="img/icons/check2.svg" alt="">
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+                                            </a>
+                                            <div class="tags">
+                                                <div style="background: #e5f0ff; color: #2e7ae5;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #e5eaff; color: #5030f0;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #eae5ff; color: #a030f0;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-catalog card-advertising">
+                                        <div class="card-catalog__badges mob">
+                                            <div style="background: #169e5a;" class="card-catalog__badge">
+                                                <img src="img/icons/stars.svg" alt="">
+                                                <span>Мы рекомендуем</span>
+                                            </div>
+                                            <div class="card-catalog__badge">
+                                                <img src="img/icons/heart-white.svg" alt="">
+                                                <span>Выбор абитуриентов</span>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image36.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__text">Реклама</div>
+                                            <div class="card-catalog__badges desc">
+                                                <div style="background: #169e5a;" class="card-catalog__badge">
+                                                    <img src="img/icons/stars.svg" alt="">
+                                                    <span>Мы рекомендуем</span>
+                                                </div>
+                                                <div class="card-catalog__badge">
+                                                    <img src="img/icons/heart-white.svg" alt="">
+                                                    <span>Выбор абитуриентов</span>
+                                                </div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Российский университет дружбы народов
+                                                    <img src="img/icons/check2.svg" alt="">
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+                                            </a>
+                                            <div class="tags">
+                                                <div style="background: #e5f0ff; color: #2e7ae5;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #e5eaff; color: #5030f0;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #eae5ff; color: #a030f0;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image3.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Национальный исследовательский университет «Высшая школа экономики»
+                                                    (НИУ
+                                                    ВШЭ)
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image34.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный технический университет имени Н. Э.
+                                                    Баумана
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                </div>
+                                {% include 'blocks/pagging.njk' %}
+                            </div>
+                            <div class="block-catalog__sticky">
+                                <div class="block-catalog__image">
+                                    <img loading="lazy" src="img/sticky.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include 'blocks/recommend.njk' %}
+
+            <div class="block-about-catalog">
+                <div class="container">
+                    <div class="block-about-catalog__content">
+                        <div class="block-about-catalog__title">
+                            Вузы Москвы
+                        </div>
+                        <div class="block-about-catalog__text">
+                            <p>
+                                В каталоге собраны вузы Москвы с минимальными проходными баллами, для облегчения
+                                поступления абитуриентов. На портале найдете университеты Москвы с подробным описанием
+                                специальностей и направлений, по которым ведется подготовка, а также подготовительные
+                                курсы. База регулярно обновляется нашими модераторами и специалистами учебных заведений.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
