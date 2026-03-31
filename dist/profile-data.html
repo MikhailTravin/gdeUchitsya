@@ -2,7 +2,7 @@
 <html lang="ru">
 
 	<head>
-		<title>Курсы</title>
+		<title>Страница с полным списком городов</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,16 +32,19 @@
 									<a href="./">Колледжи</a>
 								</li>
 								<li>
-									<a href="./" class="active">Курсы</a>
+									<a href="./">Курсы</a>
 								</li>
 								<li>
 									<a href="./">Журнал</a>
 								</li>
+								<li class="header-favorites">
+									<a href="./">Избранное</a>
+								</li>
 							</ul>
-							<div class="header__buttons">
-								<a href="./" data-popup="#login" class="btn">Войти</a>
-								<a href="./" data-popup="#registration" class="btn btn-light">Зарегистрироваться</a>
-							</div>
+							<a href="./" class="header__avatar">
+								<img src="img/avatar1.webp" alt="">
+								<span>Максим Андерсон</span>
+							</a>
 						</div>
 						<div class="header-search">
 							<div class="header-search__buttons">
@@ -74,8 +77,7 @@
 												<div class="header-search__icon icon-img">
 													<img loading="lazy" src="img/image3.webp" alt="">
 												</div>
-												<span>Национальный исследовательский университет «Высшая школа
-													экономики»</span>
+												<span>Национальный исследовательский университет «Высшая школа экономики»</span>
 											</a>
 										</li>
 										<li>
@@ -166,7 +168,12 @@
 									<use xlink:href="img/sprite.svg#search"></use>
 								</svg>
 							</button>
-							<a data-da=".header__menu, 820, 1" data-popup="#location" href="./" class="header__icon header-location">
+							<a href="./" class="header__icon header-favorites">
+								<svg style="margin-right: -1px; margin-top: 1px;" aria-hidden="true" width="17" height="17">
+									<use xlink:href="img/sprite.svg#heart3"></use>
+								</svg>
+							</a>
+							<a data-da=".header__menu, 820, 2" data-popup="#location" href="./" class="header__icon header-location">
 								<svg aria-hidden="true" width="20" height="20">
 									<use xlink:href="img/sprite.svg#location"></use>
 								</svg>
@@ -179,616 +186,135 @@
 									<span></span>
 								</div>
 							</button>
-							<a href="./" class="btn" data-popup="#login">Войти</a>
+							<a href="./" class="header__icon header-login">
+								<svg style="margin-right: -2px;" aria-hidden="true" width="20" height="20">
+									<use xlink:href="img/sprite.svg#exit"></use>
+								</svg>
+							</a>
+							<a href="./" class="header__avatar">
+								<img src="img/avatar1.webp" alt="">
+							</a>
 						</div>
 					</div>
 				</div>
 			</header>
 			<main class="main">
 
-				<div class="block-catalog block-catalog-courses">
+				<div class="block-banner block-banner-profile">
 					<div class="container">
-						<div class="block-catalog__heading-complex">
-							<h1 class="title1">Курсы</h1>
-							<form action="#" class="filter-catalog">
-								<div data-spollers="700,max" class="filter-catalog__inputs">
-									<div class="filter-catalog__column spollers-item filled">
-										<div data-spoller class="filter-catalog__button">
-											<div class="filter-catalog__titles">
-												<div class="filter-catalog__title">
-													Направления <span>Маркетинг и Продвижение</span>
-												</div>
-											</div>
-											<img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
-										</div>
-										<div class="filter-catalog__dropdowm">
-											<div class="options">
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="1" name="option1">
-													<span class="options__label">
-														<span class="options__text">Программирование и IT</span>
-													</span>
-												</label>
-												<label class="options__item">
-													<input hidden class="options__input" checked type="radio" value="2" name="option1">
-													<span class="options__label">
-														<span class="options__text">Маркетинг и Продвижение</span>
-													</span>
-												</label>
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="3" name="option1">
-													<span class="options__label">
-														<span class="options__text">Дизайн и Креатив</span>
-													</span>
-												</label>
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="4" name="option1">
-													<span class="options__label">
-														<span class="options__text">Бизнес и Управление</span>
-													</span>
-												</label>
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="5" name="option1">
-													<span class="options__label">
-														<span class="options__text">Личностное развитие и Soft Skills</span>
-													</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="filter-catalog__column spollers-item">
-										<div data-spoller class="filter-catalog__button">
-											<div class="filter-catalog__titles">
-												<div class="filter-catalog__title">
-													Категория <span></span>
-												</div>
-											</div>
-											<img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
-										</div>
-										<div class="filter-catalog__dropdowm">
-											<div class="options">
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="1" name="option2">
-													<span class="options__label">
-														<span class="options__text">Категория1</span>
-													</span>
-												</label>
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="2" name="option2">
-													<span class="options__label">
-														<span class="options__text">Категория2</span>
-													</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="filter-catalog__column spollers-item">
-										<div data-spoller class="filter-catalog__button">
-											<div class="filter-catalog__titles">
-												<div class="filter-catalog__title">
-													Стоимость <span></span>
-												</div>
-											</div>
-											<img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
-										</div>
-										<div class="filter-catalog__dropdowm">
-											<div class="filter-catalog__checkbox">
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="1" name="checkbox1">
-													<span class="checkbox__label">
-														<span class="checkbox__icon">
-															<img loading="lazy" src="img/icons/check1.svg" alt="">
-														</span>
-														<span class="checkbox__text">
-															Любая
-														</span>
-													</span>
-												</label>
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="2" name="checkbox1">
-													<span class="checkbox__label">
-														<span class="checkbox__icon">
-															<img loading="lazy" src="img/icons/check1.svg" alt="">
-														</span>
-														<span class="checkbox__text">
-															Бесплатно
-														</span>
-													</span>
-												</label>
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="3" name="checkbox1">
-													<span class="checkbox__label">
-														<span class="checkbox__icon">
-															<img loading="lazy" src="img/icons/check1.svg" alt="">
-														</span>
-														<span class="checkbox__text">
-															до 10 000 ₽
-														</span>
-													</span>
-												</label>
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="4" name="checkbox1">
-													<span class="checkbox__label">
-														<span class="checkbox__icon">
-															<img loading="lazy" src="img/icons/check1.svg" alt="">
-														</span>
-														<span class="checkbox__text">
-															от 10 000 - 50 000 ₽
-														</span>
-													</span>
-												</label>
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="5" name="checkbox1">
-													<span class="checkbox__label">
-														<span class="checkbox__icon">
-															<img loading="lazy" src="img/icons/check1.svg" alt="">
-														</span>
-														<span class="checkbox__text">
-															от 50 000 - 100 000 ₽
-														</span>
-													</span>
-												</label>
-												<label class="checkbox">
-													<input class="checkbox__input" type="checkbox" value="6" name="checkbox1">
-													<span class="checkbox__label">
-														<span class="checkbox__icon">
-															<img loading="lazy" src="img/icons/check1.svg" alt="">
-														</span>
-														<span class="checkbox__text">
-															от 100 000 ₽
-														</span>
-													</span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="filter-catalog__column spollers-item">
-										<div data-spoller class="filter-catalog__button">
-											<div class="filter-catalog__titles">
-												<div class="filter-catalog__title">
-													Срок обучения <span></span>
-												</div>
-											</div>
-											<img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
-										</div>
-										<div class="filter-catalog__dropdowm">
-											<div class="options">
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="1" name="option4">
-													<span class="options__label">
-														<span class="options__text">Срок обучения1</span>
-													</span>
-												</label>
-												<label class="options__item">
-													<input hidden class="options__input" type="radio" value="2" name="option4">
-													<span class="options__label">
-														<span class="options__text">Срок обучения2</span>
-													</span>
-												</label>
-											</div>
-										</div>
-									</div>
+						<div class="block-banner__content">
+							<div class="block-banner__body">
+								<div class="block-banner__heading-complex">
+									<h1 class="title1">
+										<span>Андерсон</span> Максим Максимович
+									</h1>
+									<p>
+										Здесь можно обновить данные, посмотреть избранное и свои отзывы.
+									</p>
 								</div>
-								<div class="filter-catalog__checkboxes">
-									<label class="checkbox2">
-										<input class="checkbox2__input" checked type="checkbox" value="1" name="checkbox2">
-										<span class="checkbox2__label">
-											<span class="checkbox2__text">Онлайн</span>
-										</span>
-									</label>
-									<label class="checkbox2">
-										<input class="checkbox2__input" checked type="checkbox" value="2" name="checkbox2">
-										<span class="checkbox2__label">
-											<span class="checkbox2__text">Оффлайн</span>
-										</span>
-									</label>
-									<label class="checkbox2">
-										<input class="checkbox2__input" type="checkbox" value="3" name="checkbox2">
-										<span class="checkbox2__label">
-											<span class="checkbox2__text">Трудоустройство</span>
-										</span>
-									</label>
-									<label class="checkbox2">
-										<input class="checkbox2__input" type="checkbox" value="4" name="checkbox2">
-										<span class="checkbox2__label">
-											<span class="checkbox2__text">Стажировка</span>
-										</span>
-									</label>
-									<label class="checkbox2">
-										<input class="checkbox2__input" type="checkbox" value="5" name="checkbox2">
-										<span class="checkbox2__label">
-											<span class="checkbox2__text">С нуля</span>
-										</span>
-									</label>
-								</div>
-							</form>
-						</div>
-						<div class="block-catalog__contents">
-							<div class="block-catalog-top">
-								<div class="block-catalog-top__result">
-									Найдено: 2 000 курсов
-								</div>
-								<div class="block-catalog-top__sorting">
-									<div class="block-catalog-top__sorting-title">Сортировать:</div>
-									<select name="form[]" class="select">
-										<option value="1" selected>по умолчанию</option>
-										<option value="2">по стоимости</option>
-										<option value="3">по рейтингу</option>
-										<option value="4">по минимальному баллу</option>
-									</select>
+								<div class="filter">
+									<a href="./" class="filter__title active">Личные данные</a>
+									<a href="./" class="filter__title">Избранное</a>
+									<a href="./" class="filter__title">Мои отзывы</a>
 								</div>
 							</div>
-							<div class="block-catalog__content">
-								<div class="block-catalog__body">
-									<div class="block-catalog__cards">
-										<div class="card-catalog2">
-											<div class="card-catalog2__sale">
-												<span>-50%</span>
-											</div>
-											<div class="card-contacts">
-												<div class="favorites">
-													<img loading="lazy" src="img/icons/heart-blue.svg" alt="" class="favorites__icon1">
-													<img loading="lazy" src="img/icons/heart1.svg" alt="" class="favorites__icon2">
-												</div>
-												<a href="./" class="share">
-													<img loading="lazy" src="img/icons/share-blue.svg" alt="">
-												</a>
-											</div>
-											<a href="./" class="card-catalog2__image">
-												<img loading="lazy" src="img/image37.webp" alt="">
-											</a>
-											<div class="card-catalog2__item">
-												<div class="card-catalog2__badges">
-													<div style="background: #169e5a;" class="card-catalog2__badge">
-														<span>Лучшая цена</span>
-													</div>
-													<div class="card-catalog2__badge">
-														<span>Скидка до 50%</span>
-													</div>
-												</div>
-												<a href="./" class="card-catalog2__titles">
-													<div class="card-catalog2__title">
-														Duis aute irure dolor in reprehenderit
-													</div>
-												</a>
-												<div class="card-descr-big mob">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-												<div class="card-catalog2__center">
-													<p>
-														Бизнес и управление | MBA
-													</p>
-													<div class="card-catalog2__rating">
-														<div class="rating__value">4.5 <span>(40)</span></div>
-														<div data-rating data-rating-size="5" data-rating-value="4.5" class="rating">
-														</div>
-													</div>
-												</div>
-												<ul class="card-descr">
-													<li class="card-descr-big">
-														<img loading="lazy" src="img/icons/logo3.svg" alt="">
-														<span>Нетология</span>
-													</li>
-													<li>
-														<svg aria-hidden="true" width="20" height="20">
-															<use xlink:href="img/sprite.svg#cash"></use>
-														</svg>
-														<span>Стоимость: <strong>2 500 руб./месяц</strong></span>
-													</li>
-													<li>
-														<img loading="lazy" src="img/icons/time.svg" alt="">
-														<span>Cрок обучения: <strong>3 месяца</strong></span>
-													</li>
-												</ul>
-												<div class="card-descr-big desc">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-											</div>
-											<a href="./" class="btn btn-grey">Подробнее</a>
-										</div>
-										<div class="card-catalog2">
-											<div class="card-contacts">
-												<div class="favorites">
-													<img loading="lazy" src="img/icons/heart-blue.svg" alt="" class="favorites__icon1">
-													<img loading="lazy" src="img/icons/heart1.svg" alt="" class="favorites__icon2">
-												</div>
-												<a href="./" class="share">
-													<img loading="lazy" src="img/icons/share-blue.svg" alt="">
-												</a>
-											</div>
-											<a href="./" class="card-catalog2__image">
-												<img loading="lazy" src="img/image37.webp" alt="">
-											</a>
-											<div class="card-catalog2__item">
-												<a href="./" class="card-catalog2__titles">
-													<div class="card-catalog2__title">
-														Duis aute irure dolor in reprehenderit
-													</div>
-												</a>
-												<div class="card-descr-big mob">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-												<div class="card-catalog2__center">
-													<p>
-														Бизнес и управление | MBA
-													</p>
-													<div class="card-catalog2__rating">
-														<div class="rating__value">4.5 <span>(40)</span></div>
-														<div data-rating data-rating-size="5" data-rating-value="4.5" class="rating">
-														</div>
-													</div>
-												</div>
-												<ul class="card-descr">
-													<li class="card-descr-big">
-														<img loading="lazy" src="img/icons/logo3.svg" alt="">
-														<span>Нетология</span>
-													</li>
-													<li>
-														<svg aria-hidden="true" width="20" height="20">
-															<use xlink:href="img/sprite.svg#cash"></use>
-														</svg>
-														<span>Стоимость: <strong>2 500 руб./месяц</strong></span>
-													</li>
-													<li>
-														<img loading="lazy" src="img/icons/time.svg" alt="">
-														<span>Cрок обучения: <strong>3 месяца</strong></span>
-													</li>
-												</ul>
-												<div class="card-descr-big desc">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-											</div>
-											<a href="./" class="btn btn-grey">Подробнее</a>
-										</div>
-										<div class="card-catalog2">
-											<div class="card-catalog2__sale">
-												<span>-50%</span>
-											</div>
-											<div class="card-contacts">
-												<div class="favorites">
-													<img loading="lazy" src="img/icons/heart-blue.svg" alt="" class="favorites__icon1">
-													<img loading="lazy" src="img/icons/heart1.svg" alt="" class="favorites__icon2">
-												</div>
-												<a href="./" class="share">
-													<img loading="lazy" src="img/icons/share-blue.svg" alt="">
-												</a>
-											</div>
-											<a href="./" class="card-catalog2__image">
-												<img loading="lazy" src="img/image37.webp" alt="">
-											</a>
-											<div class="card-catalog2__item">
-												<div class="card-catalog2__badges">
-													<div style="background: #169e5a;" class="card-catalog2__badge">
-														<span>Лучшая цена</span>
-													</div>
-													<div class="card-catalog2__badge">
-														<span>Скидка до 50%</span>
-													</div>
-												</div>
-												<a href="./" class="card-catalog2__titles">
-													<div class="card-catalog2__title">
-														Duis aute irure dolor in reprehenderit
-													</div>
-												</a>
-												<div class="card-descr-big mob">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-												<div class="card-catalog2__center">
-													<p>
-														Бизнес и управление | MBA
-													</p>
-													<div class="card-catalog2__rating">
-														<div class="rating__value">4.5 <span>(40)</span></div>
-														<div data-rating data-rating-size="5" data-rating-value="4.5" class="rating">
-														</div>
-													</div>
-												</div>
-												<ul class="card-descr">
-													<li class="card-descr-big">
-														<img loading="lazy" src="img/icons/logo3.svg" alt="">
-														<span>Нетология</span>
-													</li>
-													<li>
-														<svg aria-hidden="true" width="20" height="20">
-															<use xlink:href="img/sprite.svg#cash"></use>
-														</svg>
-														<span>Стоимость: <strong>2 500 руб./месяц</strong></span>
-													</li>
-													<li>
-														<img loading="lazy" src="img/icons/time.svg" alt="">
-														<span>Cрок обучения: <strong>3 месяца</strong></span>
-													</li>
-												</ul>
-												<div class="card-descr-big desc">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-											</div>
-											<a href="./" class="btn btn-grey">Подробнее</a>
-										</div>
-										<div class="card-catalog2">
-											<div class="card-contacts">
-												<div class="favorites">
-													<img loading="lazy" src="img/icons/heart-blue.svg" alt="" class="favorites__icon1">
-													<img loading="lazy" src="img/icons/heart1.svg" alt="" class="favorites__icon2">
-												</div>
-												<a href="./" class="share">
-													<img loading="lazy" src="img/icons/share-blue.svg" alt="">
-												</a>
-											</div>
-											<a href="./" class="card-catalog2__image">
-												<img loading="lazy" src="img/image37.webp" alt="">
-											</a>
-											<div class="card-catalog2__item">
-												<a href="./" class="card-catalog2__titles">
-													<div class="card-catalog2__title">
-														Duis aute irure dolor in reprehenderit
-													</div>
-												</a>
-												<div class="card-descr-big mob">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-												<div class="card-catalog2__center">
-													<p>
-														Бизнес и управление | MBA
-													</p>
-													<div class="card-catalog2__rating">
-														<div class="rating__value">4.5 <span>(40)</span></div>
-														<div data-rating data-rating-size="5" data-rating-value="4.5" class="rating">
-														</div>
-													</div>
-												</div>
-												<ul class="card-descr">
-													<li class="card-descr-big">
-														<img loading="lazy" src="img/icons/logo3.svg" alt="">
-														<span>Нетология</span>
-													</li>
-													<li>
-														<svg aria-hidden="true" width="20" height="20">
-															<use xlink:href="img/sprite.svg#cash"></use>
-														</svg>
-														<span>Стоимость: <strong>2 500 руб./месяц</strong></span>
-													</li>
-													<li>
-														<img loading="lazy" src="img/icons/time.svg" alt="">
-														<span>Cрок обучения: <strong>3 месяца</strong></span>
-													</li>
-												</ul>
-												<div class="card-descr-big desc">
-													<img loading="lazy" src="img/icons/logo3.svg" alt="">
-													<span>Нетология</span>
-												</div>
-											</div>
-											<a href="./" class="btn btn-grey">Подробнее</a>
-										</div>
-									</div>
-									<div class="pagging">
-										<span class="pagging__item_nav pagging__item_nav-prev disabled">
-											<img src="img/icons/arrow3.svg" alt="">
-										</span>
-										<a class="pagging__item pagging__item_active" href="./">1</a>
-										<a class="pagging__item" href="./">2</a>
-										<a class="pagging__item" href="./">3</a>
-										<a class="pagging__item pagging__item_ellipsis" href="./">...</a>
-										<a class="pagging__item" href="./">10</a>
-										<a class="pagging__item_nav  pagging__item_nav-next" href="./">
-											<img src="img/icons/arrow3.svg" alt="">
-										</a>
-									</div>
-								</div>
-								<div class="block-sticky">
-									<div class="block-sticky__image">
-										<img loading="lazy" src="img/sticky.webp" alt="">
-									</div>
-								</div>
+							<div class="block-banner__image image-other">
+								<img src="img/image44.webp" alt="">
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="block-recommend">
+				<div class="block-profile">
 					<div class="container">
-						<div class="block-recommend__content">
-							<div class="block-recommend__title">
-								Рекомендуем посмотреть
-							</div>
-							<div class="block-recommend__body">
-								<ul>
-									<li>
-										<a href="./">Qui officia deserunt mollit</a>
-									</li>
-									<li>
-										<a href="./">Lorem ipsum dolor sit amet</a>
-									</li>
-									<li>
-										<a href="./">Consectetur adipiscing elit</a>
-									</li>
-									<li>
-										<a href="./">Ut enim ad minim veniam</a>
-									</li>
-									<li>
-										<a href="./">Quis nostrud exercitation</a>
-									</li>
-								</ul>
-								<ul>
-									<li>
-										<a href="./">Qui officia deserunt mollit</a>
-									</li>
-									<li>
-										<a href="./">Lorem ipsum dolor sit amet</a>
-									</li>
-									<li>
-										<a href="./">Consectetur adipiscing elit</a>
-									</li>
-									<li>
-										<a href="./">Ut enim ad minim veniam</a>
-									</li>
-									<li>
-										<a href="./">Quis nostrud exercitation</a>
-									</li>
-								</ul>
-								<ul>
-									<li>
-										<a href="./">Qui officia deserunt mollit</a>
-									</li>
-									<li>
-										<a href="./">Lorem ipsum dolor sit amet</a>
-									</li>
-									<li>
-										<a href="./">Consectetur adipiscing elit</a>
-									</li>
-									<li>
-										<a href="./">Ut enim ad minim veniam</a>
-									</li>
-									<li>
-										<a href="./">Quis nostrud exercitation</a>
-									</li>
-								</ul>
-								<ul>
-									<li>
-										<a href="./">Qui officia deserunt mollit</a>
-									</li>
-									<li>
-										<a href="./">Lorem ipsum dolor sit amet</a>
-									</li>
-									<li>
-										<a href="./">Consectetur adipiscing elit</a>
-									</li>
-									<li>
-										<a href="./">Ut enim ad minim veniam</a>
-									</li>
-									<li>
-										<a href="./">Quis nostrud exercitation</a>
-									</li>
-								</ul>
-							</div>
+						<div class="block-profile__heading-complex">
+							<h2 class="title2">
+								Личные данные
+							</h2>
+							<p>
+								Здесь ты можешь обновить личные данные, добавить фото и указать актуальные контакты.
+							</p>
 						</div>
-					</div>
-				</div>
-
-				<div class="block-about-catalog">
-					<div class="container">
-						<div class="block-about-catalog__content">
-							<div class="block-about-catalog__title">
-								Курсы
+						<form action="#" class="form">
+							<div class="form-top">
+								<div class="form-top__left">
+									<div class="form-top__photo">
+										<img data-default-image="img/avatar1.webp" loading="lazy" src="img/avatar1.webp" alt="">
+									</div>
+									<div class="form-top__title">
+										Ваше фото
+										<span>PNG, JPG не больше 15 MB</span>
+									</div>
+								</div>
+								<div class="form-top__buttons">
+									<div class="form-top__button button-upload">
+										<input type="file" accept="image/*">
+										<img src="img/icons/upload.svg" alt="">
+										<span>Загрузить фото</span>
+									</div>
+									<div class="form-top__button button-delete">
+										<img src="img/icons/trash.svg" alt="">
+										<span>Удалить фото</span>
+									</div>
+								</div>
 							</div>
-							<div class="block-about-catalog__text">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-									dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-									Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-									mollit anim id est laborum.
-								</p>
+							<div class="form-bottom">
+								<div class="form-bottom__column">
+									<div class="form-bottom__title">
+										Фамилия Имя Отчество
+									</div>
+									<div class="form__inputs">
+										<div class="form__input">
+											<div class="form__placeholder">Фамилия</div>
+											<input data-required autocomplete="off" type="text" name="form[]" placeholder="">
+										</div>
+										<div class="form__input filled">
+											<div class="form__placeholder">Имя</div>
+											<input data-required autocomplete="off" type="text" name="form[]" placeholder="" value="Максим">
+										</div>
+										<div class="form__input filled">
+											<div class="form__placeholder">Отчество</div>
+											<input data-required autocomplete="off" type="text" name="form[]" placeholder="" value="Максим">
+										</div>
+									</div>
+								</div>
+								<div class="form-bottom__column">
+									<div class="form-bottom__title">
+										Контактные данные
+									</div>
+									<div class="form__inputs">
+										<div class="form__input filled">
+											<div class="form__placeholder">Телефон</div>
+											<input data-required autocomplete="off" type="text" name="form[]" value="+7 (999) 101 10 01" placeholder="" class="telephone">
+										</div>
+										<div class="form__input filled">
+											<div class="form__placeholder">Электронная почта</div>
+											<input data-required="email" autocomplete="off" type="text" name="form[]" value="maximanderson@mail.com" placeholder="">
+										</div>
+									</div>
+								</div>
+								<div class="form-bottom__column">
+									<div class="form-bottom__title">
+										Смена пароля
+									</div>
+									<div class="form__inputs">
+										<div class="form__input">
+											<div class="form__placeholder">Текущий пароль</div>
+											<input data-required autocomplete="off" type="password" name="form[]" placeholder="">
+										</div>
+										<div class="form__input">
+											<div class="form__placeholder">Новый пароль</div>
+											<input data-required autocomplete="off" type="password" name="form[]" placeholder="">
+										</div>
+										<div class="form__input">
+											<div class="form__placeholder">Повтор нового пароль</div>
+											<input data-required autocomplete="off" type="password" name="form[]" placeholder="">
+										</div>
+									</div>
+								</div>
+								<button type="submit" class="btn disabled">Сохранить изменения</button>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 
