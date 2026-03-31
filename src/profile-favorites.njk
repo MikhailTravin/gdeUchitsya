@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Профиль - избранное</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header-login.njk' %}
+        <main class="main">
+
+            <div class="block-banner block-banner-profile">
+                <div class="container">
+                    <div class="block-banner__content">
+                        <div class="block-banner__body">
+                            <div class="block-banner__heading-complex">
+                                <h1 class="title1">
+                                    <span>Андерсон</span> Максим Максимович
+                                </h1>
+                                <p>
+                                    Здесь можно обновить данные, посмотреть избранное и свои отзывы.
+                                </p>
+                            </div>
+                            <div class="filter">
+                                <a href="./" class="filter__title">Личные данные</a>
+                                <a href="./" class="filter__title active">Избранное</a>
+                                <a href="./" class="filter__title">Мои отзывы</a>
+                            </div>
+                        </div>
+                        <div class="block-banner__image image-other">
+                            <img src="img/image44.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-profile block-profile-favorites">
+                <div class="container">
+                    <div class="block-profile__heading-complex">
+                        <h2 class="title2">
+                            Избранное
+                        </h2>
+                        <p>
+                            Курсы, вузы и направления, которые ты отметил — всё собрано в одном месте, чтобы не потерять
+                            важное.
+                        </p>
+                    </div>
+                    <div data-tabs class="tabs">
+                        <nav data-tabs-titles class="tabs__navigation">
+                            <button type="button" class="tabs__title _tab-active">
+                                <span>Вузы</span>
+                            </button>
+                            <button type="button" class="tabs__title">
+                                <span>Колледжи</span>
+                            </button>
+                            <button type="button" class="tabs__title">
+                                <span>Курсы</span>
+                            </button>
+                            <button type="button" class="tabs__title">
+                                <span>Специальности</span>
+                            </button>
+                        </nav>
+                        <div data-tabs-body class="tabs__content">
+                            <div class="tabs__body">
+                                <div class="tabs__cards">
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites active">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites active">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__body">
+                                <div class="tabs__cards">
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__body">
+                                <div class="tabs__cards">
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites active">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites active">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__body">
+                                <div class="tabs__cards">
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                    <div class="card-catalog">
+                                        <div class="card-contacts">
+                                            <div class="favorites">
+                                                <img loading="lazy" src="img/icons/heart-blue.svg" alt=""
+                                                    class="favorites__icon1">
+                                                <img loading="lazy" src="img/icons/heart1.svg" alt=""
+                                                    class="favorites__icon2">
+                                            </div>
+                                            <a href="./" class="share">
+                                                <img loading="lazy" src="img/icons/share-blue.svg" alt="">
+                                            </a>
+                                        </div>
+                                        <a href="./" class="card-catalog__image">
+                                            <img loading="lazy" src="img/image2.webp" alt="">
+                                        </a>
+                                        <div class="card-catalog__item">
+                                            <div class="card-catalog__rating">
+                                                <div data-rating data-rating-size="5" data-rating-value="4.5"
+                                                    class="rating">
+                                                </div>
+                                                <div class="rating__value">4.5 <span>(40 отзывов)</span></div>
+                                            </div>
+                                            <a href="./" class="card-catalog__titles">
+                                                <div class="card-catalog__title">
+                                                    Московский государственный университет имени М. В. Ломоносова
+                                                </div>
+                                            </a>
+                                            <ul class="card-descr">
+                                                <li>
+                                                    <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                                    <span>Программы: <strong>60</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#people"></use>
+                                                    </svg>
+                                                    <span>Бюджетных мест: <strong>200</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#chart"></use>
+                                                    </svg>
+                                                    <span>Проходной балл: <strong>4.4</strong></span>
+                                                </li>
+                                                <li>
+                                                    <svg aria-hidden="true" width="16" height="16">
+                                                        <use xlink:href="img/sprite.svg#cash"></use>
+                                                    </svg>
+                                                    <span>Стоимость: от <strong>400 000</strong> руб./год</span>
+                                                </li>
+                                            </ul>
+                                            <div class="tags">
+                                                <div style="background: #fff6db; color: #c79500;" class="tags__tag">
+                                                    Государственный</div>
+                                                <div style="background: #cee8f5; color: #2ea8e5;" class="tags__tag">
+                                                    Общежитие</div>
+                                                <div style="background: #ffe5e6; color: #e52e3d;" class="tags__tag">
+                                                    Военная кафедра
+                                                </div>
+                                                <div style="background: #c4f5d4; color: #169e5a;" class="tags__tag">
+                                                    Бюджетные места
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="./" class="btn btn-grey">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

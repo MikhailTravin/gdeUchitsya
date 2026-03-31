@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Профиль - мои отзывы</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header-login.njk' %}
+        <main class="main">
+
+            <div class="block-banner block-banner-profile">
+                <div class="container">
+                    <div class="block-banner__content">
+                        <div class="block-banner__body">
+                            <div class="block-banner__heading-complex">
+                                <h1 class="title1">
+                                    <span>Андерсон</span> Максим Максимович
+                                </h1>
+                                <p>
+                                    Здесь можно обновить данные, посмотреть избранное и свои отзывы.
+                                </p>
+                            </div>
+                            <div class="filter">
+                                <a href="./" class="filter__title">Личные данные</a>
+                                <a href="./" class="filter__title">Избранное</a>
+                                <a href="./" class="filter__title active">Мои отзывы</a>
+                            </div>
+                        </div>
+                        <div class="block-banner__image image-other">
+                            <img src="img/image44.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-profile">
+                <div class="container">
+                    <div class="block-profile__heading-complex">
+                        <h2 class="title2">
+                            Мои отзывы
+                        </h2>
+                        <p>
+                            Здесь отображаются все отзывы, которые ты оставил. 
+                        </p>
+                    </div>
+                    <div class="block-profile__reviews">
+                        <div class="card-review">
+                            <div class="card-review__top">
+                                <div class="card-review__left">
+                                    <div class="card-review__header">
+                                        <div class="card-review__titles">
+                                            <div class="card-review__title">
+                                                <span>Отзыв о</span> курсе “Frontend-разработка”
+                                            </div>
+                                        </div>
+                                        <div class="card-review__rating">
+                                            <div data-rating data-rating-size="5" data-rating-value="5" class="rating">
+                                            </div>
+                                            <div class="card-review__data">15 января 2026</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-review__buttons">
+                                    <div class="card-review__button button-edit">
+                                        <img loading="lazy" src="img/icons/create.svg" alt="">
+                                    </div>
+                                    <div class="card-review__button button-delete">
+                                        <img loading="lazy" src="img/icons/trash.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="card-review__bottom">
+                                <ul>
+                                    <li>
+                                        <div class="card-review__text like">
+                                            <span>Полезно</span>
+                                            <span class="number">3</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-review__text nolike">
+                                            <span>Бесполезно</span>
+                                            <span class="number">0</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-review">
+                            <div class="card-review__top">
+                                <div class="card-review__left">
+                                    <div class="card-review__header">
+                                        <div class="card-review__titles">
+                                            <div class="card-review__title">
+                                                <span>Отзыв о</span> МГТУ им. Баумана
+                                            </div>
+                                        </div>
+                                        <div class="card-review__rating">
+                                            <div data-rating data-rating-size="5" data-rating-value="5" class="rating">
+                                            </div>
+                                            <div class="card-review__data">15 января 2026</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-review__buttons">
+                                    <div class="card-review__button button-edit">
+                                        <img loading="lazy" src="img/icons/create.svg" alt="">
+                                    </div>
+                                    <div class="card-review__button button-delete">
+                                        <img loading="lazy" src="img/icons/trash.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="card-review__bottom">
+                                <ul>
+                                    <li>
+                                        <div class="card-review__text like">
+                                            <span>Полезно</span>
+                                            <span>3</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-review__text nolike">
+                                            <span>Бесполезно</span>
+                                            <span>0</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

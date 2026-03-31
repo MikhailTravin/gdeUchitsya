@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Журнал</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <a href="./" class="header__logo">
+                        <img src="img/icons/logo1.svg" alt="">
+                    </a>
+                    <div class="header__menu">
+                        <ul>
+                            <li>
+                                <a href="./">Вузы</a>
+                            </li>
+                            <li>
+                                <a href="./">Колледжи</a>
+                            </li>
+                            <li>
+                                <a href="./">Курсы</a>
+                            </li>
+                            <li>
+                                <a href="./" class="active">Журнал</a>
+                            </li>
+                        </ul>
+                        <div class="header__buttons">
+                            <a href="./" data-popup="#login" class="btn">Войти</a>
+                            <a href="./" data-popup="#registration" class="btn btn-light">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <div class="header-search__buttons">
+                            <div class="header-search__button">
+                                <svg aria-hidden="true" width="17" height="17">
+                                    <use xlink:href="img/sprite.svg#search"></use>
+                                </svg>
+                            </div>
+                            <input autocomplete="off" type="text" name="form[]"
+                                placeholder="Учебное заведение, специальность">
+                            <div class="header-search__close">
+                                <svg aria-hidden="true" width="11" height="11">
+                                    <use xlink:href="img/sprite.svg#close1"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="header-search__dropdown">
+                            <div class="header-search__column">
+                                <div class="header-search__title">Учебные заведения</div>
+                                <ul>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon icon-img">
+                                                <img loading="lazy" src="img/image2.webp" alt="">
+                                            </div>
+                                            <span>Московский государственный университет им. М. В. Ломоносова</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon icon-img">
+                                                <img loading="lazy" src="img/image3.webp" alt="">
+                                            </div>
+                                            <span>Национальный исследовательский университет «Высшая школа
+                                                экономики»</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon icon-img">
+                                                <img loading="lazy" src="img/image4.webp" alt="">
+                                            </div>
+                                            <span>Санкт-Петербургский государственный университет</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-search__column">
+                                <div class="header-search__title">Специальности</div>
+                                <ul>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#hammer"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Графический дизайн</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#hammer"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Промышленный дизайн</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#hammer"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Веб-дизайн</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-search__column">
+                                <div class="header-search__title">Анонсы</div>
+                                <ul>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#newspaper"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Жизнь в кампусе: чего ожидать от студенческой жизни</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#newspaper"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Топ 10 популярных специальностей в 2026 году </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./">
+                                            <div class="header-search__icon">
+                                                <svg aria-hidden="true" width="20" height="20">
+                                                    <use xlink:href="img/sprite.svg#newspaper"></use>
+                                                </svg>
+                                            </div>
+                                            <span>Как подготовиться к вступительным экзаменам без стресса</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right">
+                        <button type="button" class="header__icon header-search-button">
+                            <svg aria-hidden="true" width="17" height="17">
+                                <use xlink:href="img/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <a data-da=".header__menu, 820, 1" data-popup="#location" href="./"
+                            class="header__icon header-location">
+                            <svg aria-hidden="true" width="20" height="20">
+                                <use xlink:href="img/sprite.svg#location"></use>
+                            </svg>
+                            <span>
+                                Санкт-Петербург
+                            </span>
+                        </a>
+                        <button type="button" class="header__icon header-burger">
+                            <div class="icon-menu">
+                                <span></span>
+                            </div>
+                        </button>
+                        <a href="./" class="btn" data-popup="#login">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+
+            <div class="block-banner block-banner-magazine">
+                <div class="container">
+                    <div class="block-banner__content">
+                        <div class="block-banner__body">
+                            <div class="block-banner__heading-complex">
+                                <h1 class="title1">
+                                    <span>Журнал абитуриентов:</span>
+                                    Где учиться?
+                                </h1>
+                                <p>
+                                    Читай, вдохновляйся и выбирай свой путь.<br>
+                                    Истории, советы и идеи для будущих студентов.
+                                </p>
+                            </div>
+                            <div class="filter">
+                                <a href="./" class="filter__title active">Поступление в вуз</a>
+                                <a href="./" class="filter__title">Поступление в колледж</a>
+                                <a href="./" class="filter__title">Курсы</a>
+                                <a href="./" class="filter__title">Специальности</a>
+                                <a href="./" class="filter__title">ЕГЭ</a>
+                                <a href="./" class="filter__title">ОГЭ</a>
+                                <a href="./" class="filter__title">Профессии</a>
+                            </div>
+                        </div>
+                        <div class="block-banner__image image-other">
+                            <img src="img/image39.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-magazine block-main-magazine">
+                <div class="container">
+                    <div class="block-magazine__body">
+                        <div class="block-magazine__cards">
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image30.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Как выбрать университет: 5 шагов к правильному решению
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image40.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Как подготовиться к вступительным экзаменам без стресса
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image41.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Как выбрать университет: 5 шагов к правильному решению
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image42.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Дистанционное обучение: плюсы, минусы и лайфхаки
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image29.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Топ 10 популярных специальностей в 2026 году
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image40.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Как подготовиться к вступительным экзаменам без стресса
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image41.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Как выбрать университет: 5 шагов к правильному решению
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image40.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Как подготовиться к вступительным экзаменам без стресса
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-magazine">
+                                <div class="card-magazine__image">
+                                    <div class="card-contacts">
+                                        <a href="./" class="share">
+                                            <img loading="lazy" src="img/icons/share.svg" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="./">
+                                        <img loading="lazy" src="img/image42.webp" alt="" class="card-magazine__pic1">
+                                    </a>
+                                </div>
+                                <div class="card-magazine__item">
+                                    <div class="card-magazine__badges">
+                                        <div class="card-magazine__badge"><span>Поступление в вуз</span></div>
+                                    </div>
+                                    <a href="./" class="card-magazine__descr">
+                                        <div class="card-magazine__title">
+                                            Дистанционное обучение: плюсы, минусы и лайфхаки
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                        <div class="card-magazine__data">04.02.2026</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% include 'blocks/pagging.njk' %}
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
