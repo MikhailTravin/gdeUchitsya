@@ -2068,6 +2068,131 @@ function initFilters() {
 
 initFilters();
 
+if (document.querySelector('.block-gallery__slider')) {
+  const swiperGallery = new Swiper('.block-gallery__slider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 'auto',
+    spaceBetween: 14,
+    speed: 400,
+    pagination: {
+      el: '.block-gallery__pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+    },
+    on: {
+      init: function () {
+        setTimeout(() => updateNavigationState(this), 50);
+      },
+      slideChange: function () {
+        updateNavigationState(this);
+      },
+      resize: function () {
+        updateNavigationState(this);
+      },
+      breakpoint: function () {
+        setTimeout(() => updateNavigationState(this), 100);
+      },
+      reachEnd: function () {
+        this.el.classList.add('is-end');
+      },
+      reachBeginning: function () {
+        this.el.classList.add('is-start');
+      },
+      fromEdge: function () {
+        if (!this.isBeginning) {
+          this.el.classList.remove('is-start');
+        }
+        if (!this.isEnd) {
+          this.el.classList.remove('is-end');
+        }
+      }
+    }
+  });
+
+  function updateNavigationState(swiper) {
+    if (!swiper || !swiper.el) return;
+
+    const sliderElement = swiper.el;
+
+    if (swiper.isBeginning) {
+      sliderElement.classList.add('is-start');
+    } else {
+      sliderElement.classList.remove('is-start');
+    }
+
+    if (swiper.isEnd) {
+      sliderElement.classList.add('is-end');
+    } else {
+      if (swiper.params.slidesPerView === 'auto' && swiper.slides && swiper.slides.length > 0) {
+        try {
+          const containerRect = swiper.container.getBoundingClientRect();
+          let lastVisibleSlide = null;
+
+          for (let i = swiper.slides.length - 1; i >= 0; i--) {
+            const slide = swiper.slides[i];
+            if (slide && slide.getBoundingClientRect) {
+              const slideRect = slide.getBoundingClientRect();
+              if (slideRect.right <= containerRect.right + 10 && slideRect.left >= containerRect.left - 100) {
+                lastVisibleSlide = slide;
+                break;
+              }
+            }
+          }
+
+          if (lastVisibleSlide && swiper.slides[swiper.slides.length - 1] === lastVisibleSlide) {
+            sliderElement.classList.add('is-end');
+          } else {
+            sliderElement.classList.remove('is-end');
+          }
+        } catch (e) {
+          console.warn('Error in updateNavigationState:', e);
+        }
+      } else {
+        sliderElement.classList.remove('is-end');
+      }
+    }
+  }
+}
+
+if (document.querySelector('.block-related__slider')) {
+  const swiperRelated = new Swiper('.block-related__slider', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 400,
+    navigation: {
+      prevEl: '.block-related__arrow-prev',
+      nextEl: '.block-related__arrow-next',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 60,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1260: {
+        slidesPerView: 3,
+        spaceBetween: 0,
+      },
+    },
+  });
+
+}
+
 //========================================================================================================================================================
 
 //Звездный рейтинг
@@ -2719,4 +2844,78 @@ if (fileInput) {
       photoImg.src = defaultPhotoSrc;
     }
   });
+}
+
+//========================================================================================================================================================
+
+const moreButtons = document.querySelectorAll('.block-card-score__more');
+
+if (moreButtons) {
+  function handleMoreClick(event) {
+    const titleBlock = event.currentTarget.closest('.block-card-score__title');
+
+    if (titleBlock) {
+      titleBlock.classList.add('active');
+    }
+  }
+
+  moreButtons.forEach(button => {
+    button.addEventListener('click', handleMoreClick);
+  });
+}
+
+//========================================================================================================================================================
+
+let cardReviewLiked = document.querySelectorAll('.card-review-liked');
+if (cardReviewLiked) {
+  cardReviewLiked.forEach(item => {
+    const numberSpan = item.querySelector('.number');
+    let currentValue = parseInt(numberSpan.textContent);
+
+    item.addEventListener('click', function () {
+      if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        numberSpan.textContent = currentValue - 1;
+        currentValue = parseInt(numberSpan.textContent);
+      } else {
+        this.classList.add('active');
+        numberSpan.textContent = currentValue + 1;
+        currentValue = parseInt(numberSpan.textContent);
+      }
+    });
+  });
+}
+
+//========================================================================================================================================================
+
+Fancybox.bind("[data-fancybox]", {
+  // опции
+});
+
+//========================================================================================================================================================
+
+//Яндекс карта
+const map = document.querySelector('#map1');
+if (map) {
+  ymaps.ready(init);
+
+  function init() {
+    var myMap = new ymaps.Map('map1', {
+      center: [55.765990, 37.684560],
+      zoom: 15,
+      controls: ['zoomControl'],
+      behaviors: ['drag']
+    }, {
+      searchControlProvider: 'yandex#search'
+    });
+
+    myMap.geoObjects
+      .add(new ymaps.Placemark([55.765990, 37.684560], {
+        /*
+        iconColor: '#0c8ce9',
+        iconImageSize: [105, 140],
+        iconImageOffset: [-57, -137],*/
+      }))
+
+  };
 }
