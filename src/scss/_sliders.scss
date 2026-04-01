@@ -52,29 +52,27 @@
 }
 
 .pagination {
-    position: absolute;
-    top: auto !important;
-    bottom: 20px !important;
-    left: 50% !important;
-    transform: translate(-50%, 0px);
+    display: flex;
     z-index: 10;
     justify-content: center;
-    gap: 12px;
-    width: calc(100% - 30px) !important;
-    display: none;
-    @media (max-width: 1310px) {
-        display: flex;
+    gap: 16px;
+    @media (max-width: 550px) {
+        gap: 12px;
     }
     .swiper-pagination-bullet {
-        flex: 0 1 30px;
-        border-radius: 10px;
-        height: 2px;
-        background-color: rgba(243, 237, 229, 0.5);
+        flex: 0 0 16px;
+        border-radius: 50%;
+        height: 16px;
+        background-color: var(--black-12);
         margin: 0px !important;
         opacity: 1 !important;
+        @media (max-width: 550px) {
+            height: 12px;
+            flex: 0 0 12px;
+        }
     }
     .swiper-pagination-bullet-active {
-        background-color: #fff;
+        background-color: var(--black);
     }
 }
 
