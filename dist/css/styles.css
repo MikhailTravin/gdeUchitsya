@@ -1849,8 +1849,8 @@ a {
   display: none;
 }
 .filter-catalog__dropdowm.dropdowm-town {
-  left: -30px;
-  width: calc(100% + 60px);
+  left: 0px;
+  width: calc(100% + 110px);
 }
 @media (max-width: 768px) {
   .filter-catalog__dropdowm.dropdowm-town {
@@ -4154,9 +4154,8 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 4px;
 }
 @media (max-width: 700px) {
