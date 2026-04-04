@@ -248,6 +248,40 @@ a {
     }
   }
 
+  // .filter-catalog__search
+
+  &__search {
+    margin: 0px 0px 5px 0px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    height: 35px;
+    background: var(--black-12);
+    border-radius: 20px;
+    padding: 5px 10px;
+    input {
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      &::placeholder {
+        color: var(--black-50);
+      }
+    }
+  }
+
+  // .filter-catalog__search-button
+
+  &__search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    flex: 0 0 16px;
+    svg {
+      fill: var(--black);
+    }
+  }
+
   // .filter-catalog__checkboxes
 
   &__checkboxes {

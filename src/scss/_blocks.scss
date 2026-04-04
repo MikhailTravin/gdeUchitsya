@@ -1948,7 +1948,6 @@
             }
         }
         .tags__tag {
-            font-family: var(--second-family);
             @media (max-width: 992px) {
                 font-size: 11px;
                 min-height: 23px;
@@ -2741,6 +2740,7 @@
         border-radius: 26px;
         padding: 30px;
         display: flex;
+        background: #fff;
         flex-direction: column;
         gap: 20px;
         @media (max-width: 390px) {

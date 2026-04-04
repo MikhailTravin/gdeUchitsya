@@ -76,40 +76,70 @@
                                             <img src="img/icons/arrow3.svg" alt="" class="filter-catalog__arrow">
                                         </div>
                                         <div class="filter-catalog__dropdowm">
+                                            <div class="filter-catalog__search">
+                                                <div class="filter-catalog__search-button">
+                                                    <svg aria-hidden="true" width="13" height="13">
+                                                        <use xlink:href="img/sprite.svg#search"></use>
+                                                    </svg>
+                                                </div>
+                                                <input autocomplete="off" type="text" name="form[]"
+                                                    placeholder="Поиск по названию города">
+                                            </div>
                                             <div class="options">
-                                                <label data-popup="#location-filter" class="options__item">
+                                                <label class="options__item">
                                                     <input hidden class="options__input" checked type="radio" value="2"
                                                         name="option2">
                                                     <span class="options__label">
                                                         <span class="options__text">Москва</span>
                                                     </span>
                                                 </label>
-                                                <label data-popup="#location-filter" class="options__item">
+                                                <label class="options__item">
                                                     <input hidden class="options__input" type="radio" value="1"
                                                         name="option2">
                                                     <span class="options__label">
                                                         <span class="options__text">Санкт-Петербург</span>
                                                     </span>
                                                 </label>
-                                                <label data-popup="#location-filter" class="options__item">
+                                                <label class="options__item">
                                                     <input hidden class="options__input" type="radio" value="3"
                                                         name="option2">
                                                     <span class="options__label">
                                                         <span class="options__text">Казань</span>
                                                     </span>
                                                 </label>
-                                                <label data-popup="#location-filter" class="options__item">
+                                                <label class="options__item">
                                                     <input hidden class="options__input" type="radio" value="4"
                                                         name="option2">
                                                     <span class="options__label">
-                                                        <span class="options__text">Красноярск</span>
+                                                        <span class="options__text">Новосибирск</span>
                                                     </span>
                                                 </label>
-                                                <label data-popup="#location-filter" class="options__item">
+                                                <label class="options__item">
                                                     <input hidden class="options__input" type="radio" value="5"
                                                         name="option2">
                                                     <span class="options__label">
-                                                        <span class="options__text">Томск</span>
+                                                        <span class="options__text">Екатеринбург</span>
+                                                    </span>
+                                                </label>
+                                                <label class="options__item">
+                                                    <input hidden class="options__input" type="radio" value="6"
+                                                        name="option2">
+                                                    <span class="options__label">
+                                                        <span class="options__text">Нижний Новгород</span>
+                                                    </span>
+                                                </label>
+                                                <label class="options__item">
+                                                    <input hidden class="options__input" type="radio" value="7"
+                                                        name="option2">
+                                                    <span class="options__label">
+                                                        <span class="options__text">Ростов-на-Дону</span>
+                                                    </span>
+                                                </label>
+                                                <label class="options__item">
+                                                    <input hidden class="options__input" type="radio" value="8"
+                                                        name="option2">
+                                                    <span class="options__label">
+                                                        <span class="options__text">Самара</span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -1146,6 +1176,272 @@
                             </a>
                         </div>
                         <div data-filter="kolledzhi" data-filter-block class="block-directions__cards">
+                            <a href="./" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image6.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Гуманитарные колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>310 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>820 специальности</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #ffd400;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image7.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Лингвистические колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>95 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>240 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #00d4ff;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image8.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Маркетинговые колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>130 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>310 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #00ff95;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image9.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Медицинские колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>150 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>420 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #ff8000;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image10.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Педагогические колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>180 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>370 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #ff0095;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image11.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Психологические колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>120 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>260 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #6aff00;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image12.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Сельское хозяйство
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>110 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>290 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #ff6a00;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image13.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Спортивные колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>80 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>160 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #ffd400;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image14.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Строительные колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>100 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>280 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #ff0004;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image15.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Театральные колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>40 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>95 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #0080ff;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image16.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Технические колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>270 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>740 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                            <a href="./" style="background: #0f0;" class="card-study">
+                                <div class="card-study__image">
+                                    <img loading="lazy" src="img/image17.webp" alt="">
+                                </div>
+                                <div class="card-study__item">
+                                    <div class="card-study__title">
+                                        Финансовые колледжи
+                                    </div>
+                                    <ul class="card-descr">
+                                        <li>
+                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
+                                            <span>330 вузов</span>
+                                        </li>
+                                        <li>
+                                            <svg aria-hidden="true" width="20" height="20">
+                                                <use xlink:href="img/sprite.svg#hammer"></use>
+                                            </svg>
+                                            <span>150 специальностей</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div data-filter="kursy" data-filter-block class="block-directions__cards">
                             <a href="./" style="background: #00d4ff;" class="card-study">
                                 <div class="card-study__image">
                                     <img loading="lazy" src="img/image8.webp" alt="">
@@ -1334,272 +1630,6 @@
                                         <li>
                                             <img loading="lazy" src="img/icons/school2.svg" alt="">
                                             <span>350 курсов</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </div>
-                        <div data-filter="kursy" data-filter-block class="block-directions__cards">
-                            <a href="./" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image6.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Гуманитарные вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>310 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>820 специальности</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #ffd400;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image7.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Лингвистические вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>95 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>240 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #00d4ff;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image8.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Маркетинговые вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>130 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>310 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #00ff95;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image9.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Медицинские вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>150 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>420 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #ff8000;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image10.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Педагогические вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>180 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>370 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #ff0095;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image11.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Психологические вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>120 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>260 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #6aff00;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image12.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Сельское хозяйство
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>110 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>290 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #ff6a00;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image13.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Спортивные вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>80 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>160 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #ffd400;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image14.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Строительные вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>100 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>280 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #ff0004;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image15.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Театральные вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>40 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>95 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #0080ff;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image16.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Технические вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>270 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>740 специальностей</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                            <a href="./" style="background: #0f0;" class="card-study">
-                                <div class="card-study__image">
-                                    <img loading="lazy" src="img/image17.webp" alt="">
-                                </div>
-                                <div class="card-study__item">
-                                    <div class="card-study__title">
-                                        Финансовые вузы
-                                    </div>
-                                    <ul class="card-descr">
-                                        <li>
-                                            <img loading="lazy" src="img/icons/school2.svg" alt="">
-                                            <span>330 вузов</span>
-                                        </li>
-                                        <li>
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#hammer"></use>
-                                            </svg>
-                                            <span>150 специальностей</span>
                                         </li>
                                     </ul>
                                 </div>
