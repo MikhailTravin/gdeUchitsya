@@ -438,6 +438,14 @@ a {
     &::-webkit-scrollbar {
       display: none;
     }
+    &.dropdowm-town {
+      left: -30px;
+      width: calc(100% + 60px);
+      @media (max-width: 768px) {
+        width: 100%;
+        left: 0;
+      }
+    }
     @media (min-width: 701px) {
       opacity: 0;
       pointer-events: none;
@@ -1159,7 +1167,7 @@ a {
     gap: 5px 10px;
     .rating__value {
       font-size: 16px;
-      span{
+      span {
         font-size: 14px;
       }
     }
