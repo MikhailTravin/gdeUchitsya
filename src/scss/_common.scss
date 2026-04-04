@@ -629,7 +629,6 @@ a {
     font-size: 14px;
     line-height: 110%;
     letter-spacing: 0.01em;
-    color: var(--primary-blue);
     border-radius: 6px;
     background: var(--blue-light);
     padding: 2px 12px;
@@ -726,7 +725,7 @@ a {
     span {
       strong {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         color: var(--black);
       }
     }
@@ -1124,29 +1123,6 @@ a {
     flex-wrap: wrap;
     align-items: center;
     gap: 5px 10px;
-    $starActive: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOSAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTQuNzY0IDE3LjUwMDZjLS4xMzE2LjAwMDUtLjI2LS4wNDA1LS4zNjY4LS4xMTcybC01LjAyMzktMy42NDIyLTUuMDIzOCAzLjY0MjJhLjc1Ljc1IDAgMCAxLTEuMTcyLS43ODNsMS45NTk0LTUuNzk2NC01LjA3ODEtMy40ODI0YS43NS43NSAwIDAgMSAuNDI0LTEuMzcxaDYuMjY1bDEuODkwNi01LjgyMDNhLjc1Ljc1IDAgMCAxIDEuNDI4IDBsMS44OTA2IDUuODIwM2g2LjI2NWEuNzUuNzUgMCAwIDEgLjQyNCAxLjM3MWwtNS4wNzggMy40ODI0IDEuOTU5MyA1Ljc5NjRhLjc1Ljc1IDAgMCAxLS43MDcuOTg0WiIgZmlsbD0iI0Y1RDg0OSIvPjwvc3ZnPg==";
-    .rating {
-      .rating__items {
-        [data-rating="set"] & {
-          @media (any-hover: hover) {
-            &:hover {
-              .rating__item {
-                background: url($starActive) 0 0 / var(--star-width) no-repeat;
-              }
-            }
-          }
-        }
-      }
-      .rating__item {
-        &--active {
-          background: url($starActive) 0 0 / var(--star-width) no-repeat;
-        }
-
-        span {
-          background: url($starActive) 0 0 / var(--star-width) no-repeat;
-        }
-      }
-    }
     @media (max-width: 650px) {
       order: 2;
     }
