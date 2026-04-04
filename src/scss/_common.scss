@@ -430,7 +430,7 @@ a {
   // .filter-catalog__dropdowm
 
   &__dropdowm {
-    max-height: 250px;
+    max-height: 310px;
     width: 100%;
     overflow: auto;
     -ms-overflow-style: none;
@@ -1157,6 +1157,12 @@ a {
     flex-wrap: wrap;
     align-items: center;
     gap: 5px 10px;
+    .rating__value {
+      font-size: 16px;
+      span{
+        font-size: 14px;
+      }
+    }
     @media (max-width: 650px) {
       order: 2;
     }
