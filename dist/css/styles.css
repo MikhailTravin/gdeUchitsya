@@ -1848,6 +1848,16 @@ a {
 .filter-catalog__dropdowm::-webkit-scrollbar {
   display: none;
 }
+.filter-catalog__dropdowm.dropdowm-town {
+  left: -30px;
+  width: calc(100% + 60px);
+}
+@media (max-width: 768px) {
+  .filter-catalog__dropdowm.dropdowm-town {
+    width: 100%;
+    left: 0;
+  }
+}
 @media (min-width: 701px) {
   .filter-catalog__dropdowm {
     opacity: 0;
