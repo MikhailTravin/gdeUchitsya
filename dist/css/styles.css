@@ -4160,10 +4160,7 @@ a {
 }
 @media (max-width: 700px) {
   .block-intro .filter-catalog .filter-catalog__inputs {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 .block-intro .filter-catalog .filter-catalog__column {
