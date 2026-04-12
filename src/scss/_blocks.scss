@@ -733,18 +733,13 @@
             flex: 1 1 auto;
             gap: 15px;
             @media (max-width: 600px) {
+                width: 100%;
                 flex-direction: column;
-                align-items: center;
-            }
-        }
-        .card-study__title {
-            @media (max-width: 600px) {
-                text-align: center;
             }
         }
         .card-descr {
             @media (max-width: 600px) {
-                align-items: center;
+                width: 100%;
             }
             li {
                 @media (max-width: 390px) {
@@ -1943,10 +1938,14 @@
             }
         }
         .tags__tag {
-            @media (max-width: 992px) {
-                font-size: 11px;
+            @media (max-width: 480px) {
+                font-size: 14px;
+                padding: 2px 12px;
+                min-height: 30px;
+            }
+            @media (max-width: 360px) {
+                font-size: 12px;
                 min-height: 23px;
-                padding: 2px 10px;
             }
         }
     }
@@ -2814,7 +2813,17 @@
             margin: 26px 0px 0px 0px;
         }
     }
-
+    .btn-review {
+        @media (max-width: 768px) {
+            width: 100%;
+            margin: 0px 0px 30px 0px;
+        }
+    }
+    .title3 {
+        @media (max-width: 768px) {
+            margin: 0px 0px 10px 0px;
+        }
+    }
     // .block-card-reviews__heading-complex
 
     &__heading-complex {
@@ -2949,6 +2958,7 @@
         @media (max-width: 768px) {
             margin: 26px 0px 0px 0px;
             gap: 18px;
+            justify-content: center;
         }
         @media (max-width: 392px) {
             flex-direction: column;
