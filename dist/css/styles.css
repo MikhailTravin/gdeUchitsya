@@ -7378,6 +7378,11 @@ a {
     margin: 0 auto;
   }
 }
+@media (max-width: 768px) {
+  .block-card-programs .btn.btn-light {
+    width: 100%;
+  }
+}
 .block-card-programs__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7897,7 +7902,7 @@ a {
     gap: 10px;
   }
 }
-@media (max-width: 393px) {
+@media (max-width: 768px) {
   .block-card-reviews__buttons .btn {
     width: 100%;
   }
