@@ -123,14 +123,14 @@ a {
       }
     }
   }
-  &.btn-grey {
+  &.btn-blue {
     border-radius: 100px;
-    background-color: var(--light-grey-background);
+    color: var(--primary-blue);
+    background-color: var(--blue-16);
     min-height: 49px;
-    color: var(--black);
     &:hover {
-      color: var(--primary-blue);
-      background-color: var(--blue-16);
+      color: var(--white);
+      background-color: var(--primary-blue);
     }
   }
 }
